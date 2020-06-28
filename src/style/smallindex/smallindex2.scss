@@ -1876,7 +1876,6 @@ only screen and (min-device-pixel-ratio:1.5) {
         border: solid 1px #f7f7f7 \0;
         border: solid 1px #f7f7f7 \9;
         border-top: none\9;
-        filter: progid: DXImageTransform.Microsoft.gradient(enabled="true", startColorstr="#F2FFFFFF", endColorstr="#F2FFFFFF");
         background-color: rgba(255, 255, 255, .95);
         *background-image: url(about:blank);
         background-image: url(about:blank) \0;
@@ -1918,7 +1917,6 @@ only screen and (min-device-pixel-ratio:1.5) {
             font: 400 9px/14px consolas;
         }
         .hover {
-            filter: progid: DXImageTransform.Microsoft.gradient(enabled="true", startColorstr="#19270202", endColorstr="#19270202");
             background-color: rgba(39, 2, 2, .1);
         }
     }
