@@ -1177,9 +1177,10 @@ a:hover {
     background-size: 224px 280px;
     background-image: url(//misc.360buyimg.com/jdf/1.0.0/unit/shortcut/5.0.0/i/sprite.shortcutUserinfo@2x.png);
   }
-  #shortcut-2014 #ttbar-login {
-    margin-right: 10px;
-  }
+}
+
+#shortcut-2014 #ttbar-login {
+  margin-right: 10px;
 }
 
 /* jdf-1.0.0/ global-header.css Date:2020-05-14 19:20:11 */
