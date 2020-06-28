@@ -2279,8 +2279,11 @@ only screen and (min-device-pixel-ratio:1.5) {
     font: 12px/16px simsun, Hiragino Sans GB;
 }
 
-
-/* jdf-1.0.0/ global-footer.css Date:2020-05-14 19:20:11 */
+@font-face {
+    font-family: languagefont;
+    src: url(../../img/icofont.eot);
+    src: url(../../img/icofont.eot#iefix) format("embedded-opentype"), url(../../img/icofont.ttf) format("truetype"), url(../../img/icofont.woff) format("woff"), url(../../img/icofont.svg) format("svg")
+}
 
 .languagefont {
     font-family: languagefont!important;
