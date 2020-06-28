@@ -1,0 +1,287 @@
+@charset 'utf-8';
+.jdm-toolbar-wrap {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9990;
+    width: 0;
+    height: 100%;
+}
+
+.jdm-toolbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-right: 6px solid #7a6e6e;
+    -webkit-transition: right .3s ease-in-out 0s;
+    -moz-transition: right .3s ease-in-out 0s;
+    transition: right .3s ease-in-out 0s;
+}
+
+.jdm-toolbar-panels {
+    position: absolute;
+    left: 6px;
+    _left: 6px;
+    top: 0;
+    width: 270px;
+    height: 100%;
+    z-index: 2;
+    background: #eceaea;
+    _display: none;
+}
+
+.jdm-toolbar-panel {
+    width: 270px;
+    height: 100%;
+    position: absolute;
+    background: #eceaea;
+}
+
+.jdm-tbar-panel-header {
+    position: relative;
+    width: 270px;
+    height: 40px;
+    line-height: 40px;
+    background: #eceaea;
+    i {
+        margin-right: 4px;
+        margin-left: 10px;
+        vertical-align: top;
+    }
+    .title {
+        display: inline-block;
+        height: 40px;
+        color: #5e5050;
+        font: 16px/40px "微软雅黑";
+    }
+    .close-panel {
+        width: 12px;
+        height: 12px;
+        background-position: 0 -250px;
+        position: absolute;
+        right: 8px;
+        top: 16px;
+        cursor: pointer;
+        -webkit-transition: transform .2s ease-out 0s;
+        -moz-transition: transform .2s ease-out 0s;
+        transition: transform .2s ease-out 0s;
+    }
+}
+
+.jdm-toolbar-wrap a {
+    text-decoration: none;
+}
+
+.jdm-tbar-panel-header .close-panel,
+.jdm-tbar-panel-header i,
+.jdm-toolbar-tab .tab-ico,
+.jdm-toolbar-tab .tab-tip,
+.jdm-toolbar-tabs .tabs-tip .ico {
+    display: inline-block;
+    background-image: url(../../img/toolbars.png);
+    background-repeat: no-repeat;
+}
+
+.jdm-tbar-panel-main {
+    position: relative;
+}
+
+.jdm-tbar-panel-ad .jdm-tbar-panel-content {
+    overflow: hidden;
+}
+
+.jdm-tbar-panel-content {
+    width: 270px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    .jdm-tbar-tipbox2 {
+        width: 270px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -60px;
+    }
+}
+
+#J-global-toolbar .jdm-tbar-tab-giftCard .tab-ico {
+    background-image: url(../../img/jdcard.png);
+    width: 17px;
+    height: 14px;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.jdm-tbar-tipbox2 {
+    text-align: center;
+}
+
+.i-loading {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../../img/buyloading.gif);
+    background-repeat: no-repeat;
+}
+
+.jdm-toolbar-header {
+    position: absolute;
+    top: 0;
+    right: -6px;
+}
+
+.jdm-toolbar-tabs {
+    position: absolute;
+    top: 50%;
+    left: -29px;
+    width: 35px;
+    margin-top: -61px;
+    .tabs-tip {
+        position: absolute;
+        top: 0;
+        right: 35px;
+        height: 35px;
+        line-height: 35px;
+        white-space: nowrap;
+        border-radius: 5px;
+        background: #c81623;
+        color: #fff;
+        padding: 0 10px;
+        padding-left: 30px;
+        .ico {
+            width: 15px;
+            height: 12px;
+            background-position: -98px -162px;
+            position: absolute;
+            top: 13px;
+            left: 10px;
+        }
+        b {
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: transparent 6px dashed;
+            border-left: 6px solid #c81623;
+            position: absolute;
+            right: -12px;
+            top: 12px;
+            z-index: 20;
+        }
+    }
+}
+
+.jdm-toolbar-tab {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    background-color: #7a6e6e;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    .tab-text {
+        width: 62px;
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
+        text-align: center;
+        font-family: "微软雅黑";
+        position: absolute;
+        z-index: 1;
+        left: 35px;
+        top: 0;
+        background-color: #7a6e6e;
+        -webkit-border-radius: 3px 0 0 3px;
+        -moz-border-radius: 3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
+        -webkit-transition: left .3s ease-in-out .1s;
+        -moz-transition: left .3s ease-in-out .1s;
+        transition: left .3s ease-in-out .1s;
+        _display: none;
+    }
+    .tab-sub {
+        position: absolute;
+        z-index: 3;
+        right: 2px;
+        top: -5px;
+        height: 11px;
+        padding: 1px 2px;
+        border: 1px solid #b61d1d;
+        overflow: hidden;
+        color: #fff;
+        font: 11px/11px verdana;
+        text-align: center;
+        min-width: 11px;
+        border-radius: 10px;
+        background-color: #cc6060;
+        background-image: -moz-linear-gradient(top, #cc6060, #b61d1d);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cc6060), color-stop(1, #b61d1d));
+        background-image: linear-gradient(to bottom, #cc6060 0, #b61d1d 100%);
+    }
+    .tab-ico {
+        width: 34px;
+        height: 35px;
+        margin-left: 1px;
+        position: relative;
+        z-index: 2;
+        background-color: #7a6e6e;
+        _display: block;
+    }
+}
+
+#J-global-toolbar .jdm-tbar-tab-follow .tab-ico {
+    color: #fff;
+    padding-left: 4px;
+    padding-top: 3px;
+    background-image: none;
+    background-color: #c91423;
+    line-height: 1.2;
+    width: 31px;
+    height: 32px;
+    left: -1px;
+    border-radius: inherit;
+}
+
+#J-global-toolbar .jdm-tbar-tab-always .tab-ico {
+    background: url(../../img/buyslider.png) 0 -2px no-repeat;
+    width: 17px;
+    height: 17px;
+    margin-top: 9px;
+    margin-left: 8px;
+}
+
+.jdm-tbar-tab-follow .tab-ico {
+    background-position: -50px -50px;
+}
+
+.jdm-tbar-tab-top .tab-ico {
+    background-position: -50px -250px;
+}
+
+.jdm-toolbar-footer .jdm-toolbar-tab .tab-text {
+    width: 50px;
+}
+
+#J-global-toolbar .jdm-tbar-tab-faq .tab-ico {
+    background-image: url(../../img/jdcard1.png);
+    background-position: 6px -32px;
+}
+
+.jdm-toolbar-footer {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    left: -29px;
+    .jdm-toolbar-tab .tab-text {
+        width: 50px;
+    }
+}
+
+.jdm-tbar-tab-feedback .tab-ico {
+    background-position: -50px -300px;
+}

@@ -1,0 +1,103 @@
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.mod_container {
+    font-family: Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+    background: #f6f6f6;
+    overflow: hidden;
+    img {
+        background: url(//misc.360buyimg.com/lib/skin/e/i/error-jd.gif) no-repeat 50% 50%;
+    }
+}
+
+.mod_container,
+body {
+    min-width: 1190px;
+}
+
+.o2_mini {
+    body {
+        min-width: 990px;
+    }
+    .mod_container {
+        min-width: 990px;
+    }
+    .grid_c1 {
+        width: 990px;
+    }
+    .w {
+        width: 1000px;
+    }
+}
+
+.grid_c1 {
+    width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.o2_wide {
+    .w {
+        width: 1200px;
+    }
+    .mod_w {
+        width: 1200px;
+    }
+    #logo-2014 {
+        width: 350px;
+        .extra {
+            padding-left: 11px;
+        }
+    }
+    #search-2014 {
+        width: 540px;
+        margin: 27px 80px 0;
+        .text {
+            width: 450px;
+        }
+    }
+    #settleup-2014 {
+        margin-right: 0;
+    }
+    #shelper {
+        width: 538px;
+    }
+    #hotwords {
+        width: 462px;
+        padding-left: 80px;
+    }
+}
+
+.mod_w {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.o2data-lazyload {
+    background: url(//misc.360buyimg.com/mtd/pc/index/gb/images/lazyload.gif) no-repeat 50% #fff;
+    &.cms_header {
+        background: #f7f7f7;
+    }
+}
+
+#search-2014 {
+    position: relative;
+    z-index: 11;
+    float: left;
+    width: 384px;
+    margin: 27px 30px 0 95px;
+    .button {
+        width: 80px;
+    }
+}
+
+#search-2014,
+#settleup-2014 {
+    margin-top: 27px;
+}
+
+#cmsfooter {
+    min-height: 480px;
+}

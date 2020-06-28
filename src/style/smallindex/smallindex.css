@@ -1,0 +1,228 @@
+#cmsfooter {
+  min-height: 480px;
+}
+
+a {
+  color: #232321;
+  text-decoration: none;
+}
+
+body {
+  font: 12px/150% tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif;
+}
+
+#service-2017 {
+  padding-bottom: 18px;
+  background: #eaeaea;
+  overflow: hidden;
+}
+
+#service-2017 .slogen {
+  position: relative;
+  height: 42px;
+  padding: 30px 0 30px 55px;
+  overflow: hidden;
+}
+
+#service-2017 .slogen .fore2 i {
+  background-position: 0 -43px;
+}
+
+#service-2017 .slogen .fore3 i {
+  background-position: 0 -86px;
+}
+
+#service-2017 .slogen .fore4 i {
+  background-position: 0 -129px;
+}
+
+#service-2017 .wrap {
+  padding-left: 65px;
+  margin-right: -140px;
+  padding: 20px 0 20px 55px;
+  margin-right: -340px;
+}
+
+#service-2017 .jd-help dl {
+  width: 206px;
+  line-height: 22px;
+}
+
+#service-2017 dl {
+  float: left;
+}
+
+#service-2017 dt {
+  padding-bottom: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #777;
+  height: 22px;
+}
+
+#service-2017 dd {
+  font-size: 12px;
+  color: #666;
+  height: 22px;
+  overflow: hidden;
+}
+
+#service-2017 .item {
+  float: left;
+  position: relative;
+  width: 224px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: 700;
+  text-indent: 46px;
+  color: #444;
+}
+
+#service-2017 .item i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 42px;
+  text-indent: -9999px;
+  background-image: url(../../img/buy14.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.jd-help {
+  border-top: solid 1px #dedede;
+  border-bottom: solid 1px #dedede;
+}
+
+.root61.o2_wide #service-2017 .slogen,
+.root61.o2_wide #service-2017 .wrap {
+  padding-left: 45px;
+}
+
+.root61 #service-2017 .slogen {
+  padding-left: 65px;
+  margin-right: -23px;
+}
+
+.root61 #service-2017 .slogen .item,
+.w1190 #service-2017 .slogen .item,
+.w1200 #service-2017 .slogen .item {
+  width: 292px;
+}
+
+.root61.o2_wide #service-2017 .slogen,
+.root61.o2_wide #service-2017 .wrap {
+  padding-left: 45px;
+}
+
+.root61 #service-2017 .wrap dl,
+.w1190 #service-2017 .wrap dl,
+.w1200 #service-2017 .wrap dl {
+  width: 255px;
+}
+
+#footer-2017 {
+  padding-bottom: 30px;
+  background: #eaeaea;
+  text-align: center;
+}
+
+#footer-2017 .copyright_links p {
+  font-size: 0;
+}
+
+#footer-2017 .copyright_info {
+  padding: 10px 0;
+  line-height: 22px;
+  color: #999;
+}
+
+#footer-2017 .copyright_info a {
+  color: #999;
+}
+
+#footer-2017 .copyright_split {
+  margin: 0 6px;
+  color: #ccc;
+}
+
+#footer-2017 .copyright_license {
+  margin-left: 16px;
+}
+
+#footer-2017 .mod_copyright_inter_ico_global {
+  background-position: 0 0;
+  width: 15px;
+  height: 12px;
+  margin-top: -1px;
+}
+
+#footer-2017 .mod_copyright_inter_ico {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  vertical-align: -1px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-image: url(../../img/last1.png);
+}
+
+#footer-2017 .mod_copyright_inter_ico_rissia {
+  background-position: -20px 0;
+}
+
+#footer-2017 .mod_copyright_inter_ico_indonesia {
+  background-position: 0 -17px;
+}
+
+#footer-2017 .mod_copyright_inter_ico_spain {
+  background-position: -40px 0;
+}
+
+#footer-2017 .mod_copyright_inter_ico_thailand {
+  background-position: -20px -17px;
+}
+
+#footer-2017 .copyright_auth_ico_2 {
+  background-position: -104px 0;
+}
+
+#footer-2017 .copyright_auth_ico {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(../../img/buyfooter.png);
+  line-height: 1000px;
+}
+
+#footer-2017 .copyright_auth_ico_3 {
+  background-position: 0 -33px;
+}
+
+#footer-2017 .copyright_auth_ico_4 {
+  background-position: -104px -33px;
+}
+
+#footer-2017 .copyright_auth_ico_5 {
+  background-position: 0 -66px;
+}
+
+#footer-2017 .copyright_auth_ico_6 {
+  background-position: -104px -66px;
+}
+
+#footer-2017 .copyright_links p a,
+#footer-2017 .copyright_links p span {
+  font-size: 12px;
+}
+
+.root61 #footer-2017 .copyright_split,
+.w1190 #footer-2017 .copyright_split,
+.w1200 #footer-2017 .copyright_split {
+  margin: 0 10px;
+}

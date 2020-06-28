@@ -1,0 +1,283 @@
+@charset 'utf-8';
+.lazyimg {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid_c1 {
+    // height: 100%;
+    // float: left;
+    margin: 0px auto;
+    width: 1190px;
+    .special_offer {
+        // float: left;
+        background-color: white;
+        .box_hd {
+            height: 60px;
+            padding: 0 20px;
+            font-size: 0;
+            line-height: 0;
+            .box_hd_lk {
+                display: inline-block;
+                position: relative;
+                height: 32px;
+                margin: 12px 0 0;
+            }
+            a {
+                color: #666;
+                text-decoration: none;
+                cursor: pointer;
+                .box_tit {
+                    float: left;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 32px;
+                    margin: 0px;
+                }
+                h3 {
+                    display: block;
+                    font-size: 1.17em;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
+                    font-weight: bold;
+                }
+                .box_hd_arrow {
+                    background-image: url(../img/jiantou.png);
+                    background-position: -16px 0;
+                    width: 16px;
+                    height: 16px;
+                    position: relative;
+                    float: left;
+                    top: 9px;
+                    left: 10px;
+                }
+            }
+        }
+        .box_bd {
+            display: block;
+            .special_inner {
+                padding: 0 15px 15px;
+                .tab {
+                    position: relative;
+                    .tab_head {
+                        position: absolute;
+                        bottom: 108%;
+                        right: -12px;
+                        .tab_head_item {
+                            position: relative;
+                            display: inline-block;
+                            margin: 0 13.5px;
+                            .special_tab_lk {
+                                display: inline-block;
+                                cursor: pointer;
+                                font-size: 14px;
+                                font-family: Microsoft Yahei, PingFangSC-Medium, sans-serif, serif;
+                                color: #999;
+                                line-height: 19px;
+                                padding-bottom: 2px;
+                            }
+                        }
+                        .tab_head_item.active .special_tab_lk {
+                            color: #e1251b;
+                        }
+                        .tab_head_item.active:after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #e1251b;
+                        }
+                    }
+                    .tab_body {
+                        width: 560px;
+                        height: 270px;
+                        .tab_body_item {
+                            margin: 0px;
+                            .special_list {
+                                height: 270px;
+                                display: inline-block;
+                                .special_item_0 {
+                                    background-color: rgba(109, 126, 146, .05);
+                                    float: left;
+                                    width: 170px;
+                                    height: 265px;
+                                    margin-right: 6px;
+                                    .special_item_img {
+                                        margin-top: 46px;
+                                        width: 120px;
+                                        display: inline-block;
+                                        left: 50%;
+                                        margin-left: -60px;
+                                        height: 120px;
+                                        text-align: center;
+                                    }
+                                    .special_item_miaoShaPrice {
+                                        font-size: 18px;
+                                        display: inline;
+                                        margin: 0 2px;
+                                    }
+                                    .special_item_price {
+                                        margin-top: 4px;
+                                    }
+                                    .special_item_jdPrice {
+                                        display: inline;
+                                        margin: 0 2px;
+                                    }
+                                    .special_item_message {
+                                        margin-left: 0;
+                                        width: 100%;
+                                        text-align: center;
+                                    }
+                                    .special_item_name {
+                                        margin-top: 9px;
+                                        margin-bottom: 4px;
+                                        height: 19px;
+                                        line-height: 19px;
+                                        width: 150px;
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        text-align: center;
+                                    }
+                                    .special_item_soldMsg {
+                                        position: static;
+                                        margin-top: 8px;
+                                    }
+                                }
+                                .special_item_1,
+                                .special_item_2,
+                                .special_item_3,
+                                .special_item_4 {
+                                    margin-left: 19px;
+                                    margin-bottom: 48px;
+                                }
+                                .special_item_1,
+                                .special_item_2 {
+                                    margin-top: 18px;
+                                }
+                                .special_item {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .special_item_soldNum {
+            display: inline-block;
+            line-height: 18px;
+            color: #e1251b;
+        }
+        .special_item_soldMsg {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 12px;
+            line-height: 16px;
+            position: absolute;
+            color: #999;
+        }
+        .special_item_name {
+            display: inline-block;
+            width: 100%;
+            color: #333;
+            height: 32px;
+            font-size: 12px;
+            line-height: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            font-family: Microsoft Yahei, PingFangSC-Medium, sans-serif, serif;
+        }
+        .special_item_img {
+            float: left;
+            width: 84px;
+            height: 84px;
+        }
+        .lazyimg_img {
+            width: 100%;
+            height: 100%;
+        }
+        .special_item_message {
+            float: left;
+            width: 75px;
+            margin-left: 6px;
+            font-size: 0;
+        }
+        .special_item_miaoShaPrice {
+            font-size: 14px;
+            line-height: 16px;
+            font-family: Arial-BoldMT, Microsoft Yahei, PingFangSC-Medium, sans-serif, serif;
+            color: #e1251b;
+            letter-spacing: 0;
+            margin-top: 5px;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .special_item_jdPrice {
+            display: inline-block;
+            width: 100%;
+            text-decoration: line-through;
+            font-family: sans-serif, serif;
+            color: #999;
+            font-size: 12px;
+            line-height: 14px;
+            margin-top: 2px;
+            transform-origin: top left;
+        }
+        .special_item_lk {
+            position: relative;
+            display: inline-block;
+            width: 170px;
+            height: 84px;
+        }
+        .special_item_lk:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .special_item_lowestFirst {
+            display: inline-block;
+            width: 90px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAYBAMAAACIFvdWAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAASUExURfa3PfekAPesGfenC/a0MvewJ5uweioAAABjSURBVHjajdAxDYBQAMRQBhBwEggKsECCge9fDEwEaNLcmzt16i1b6nbekrTtSOp67Knr427b+lzzKEa8FCNQy4gPH/FnI8hGkI0gG0E2gmwEYYTCCIURCiMURiiMUBihMEJd/HcrFSr6YboAAAAASUVORK5CYII=);
+            background-size: cover;
+            background-position: 50%;
+            font-family: MicrosoftYaHei-Bold, Microsoft Yahei, PingFangSC-Medium, sans-serif, serif;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 24px;
+            color: #fff;
+            letter-spacing: 0;
+            text-align: center
+        }
+        .special_item_lowest {
+            display: inline-block;
+            overflow: hidden;
+            width: 84px;
+            height: 16px;
+            font-size: 11px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .6);
+            white-space: nowrap;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
+        .special_item {
+            display: inline-block;
+            vertical-align: top;
+            width: 170px;
+            height: 89px;
+        }
+    }
+}

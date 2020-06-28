@@ -1,0 +1,251 @@
+.more2_list {
+  margin: 0 -5px;
+}
+
+.more2_item {
+  position: relative;
+  float: left;
+  width: 230px;
+  height: 322px;
+  margin: 0 5px 10px;
+  background: #fff;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+
+.more2_lk {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.more2_item_gdot {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  background-color: #b1b1b1;
+}
+
+.lazyimg_loaded .lazyimg_img {
+  opacity: 1;
+}
+
+.more2_img {
+  display: block;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.more2_img img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.more2_info {
+  clear: both;
+  line-height: 24px;
+  padding: 0 20px;
+  height: 65px;
+}
+
+.more2_info_name {
+  height: 48px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #666;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.more2_info_price {
+  margin-top: 10px;
+}
+
+.more2_info_price_plus .mod_price {
+  float: left;
+  width: 80px;
+  text-align: left;
+}
+
+.more2 .mod_price {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+  height: 18px;
+  color: #e1251b;
+}
+
+.more2 .mod_price i {
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: MicrosoftYahei-regular, Arial, Helvetica, sans-serif;
+}
+
+.mod_price i {
+  margin-right: 3px;
+  font-family: arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.more2_info_price_txt {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: arial, sans-serif;
+}
+
+.more2_info_price_txt-decimal {
+  font-size: 12px;
+}
+
+.more2_info_price_company .more2_price_company,
+.more2_info_price_newcomer .more2_price_newcomer,
+.more2_info_price_plus .more2_price_plus {
+  float: right;
+  width: 100px;
+  margin-right: 1px;
+  text-align: right;
+}
+
+.more2_discount {
+  font-size: 12px;
+  color: #e1251b;
+  height: 14px;
+  padding: 0 6px;
+  border: 1px solid #e1251b;
+  line-height: 14px;
+  border-radius: 2px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: 1px;
+}
+
+.more2_item.hover-on .more2_item_delete {
+  display: block;
+}
+
+.more2_item_delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  display: none;
+  opacity: 0;
+  background: url(../img/hv.png) no-repeat;
+  background-size: 16px;
+  background-position: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.more2_item.hover-on .more2_item_hd {
+  display: block;
+}
+
+.more2_item_hd .more2_item_btn:first-child {
+  margin-left: 0;
+}
+
+.more2_item_hd {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s;
+  background-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), color-stop(35%, white), to(white));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0, white 35%, white);
+}
+
+.more2_item_hd .more2_item_btn {
+  height: 28px;
+  width: 120px;
+  display: inline-block;
+  font-size: 12px;
+  color: #353131;
+  border: 1px solid #353131;
+  border-radius: 15px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 18px;
+}
+
+.more2_btn_find {
+  background-color: #333;
+  color: #fff !important;
+}
+
+.more2_item_hd .more2_btn_icon {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.more2_btn_find .more2_btn_icon {
+  margin-top: -4px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  background-size: 16px 16px;
+  margin-right: 4px;
+  background-image: url(../img/hv1.png);
+}
+
+.more2_lk:hover .more2_item_hd {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  text-align: center;
+  display: block;
+  opacity: 1;
+  background-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), color-stop(35%, white), to(white));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0, white 35%, white);
+}
+
+.more2_lk:hover .more2_item_delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  display: block;
+  opacity: 1;
+  background: url(../img/hv.png) no-repeat;
+  background-size: 16px;
+  background-position: 50%;
+  cursor: pointer;
+}

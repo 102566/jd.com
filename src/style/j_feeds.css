@@ -1,0 +1,69 @@
+.feed-tab-wrapper {
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.grid_c1 {
+  margin: 0 auto;
+  width: 1190px;
+}
+
+.feed-tab {
+  margin: 0 auto;
+  height: 60px;
+  width: 1080px;
+}
+
+.feed-tab__item {
+  position: relative;
+  float: left;
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.feed-tab__item-title {
+  color: #333;
+  margin-top: 7px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+  height: 27px;
+}
+
+.feed-tab__item--active .feed-tab__item-title-text {
+  background: #e1251b;
+  color: #fff;
+  width: 70px;
+  height: 27px;
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0 5px;
+}
+
+.feed-tab__item--active .feed-tab__item-desc {
+  color: #e1251b;
+}
+
+.feed-tab__item-desc {
+  color: #999;
+  font-size: 14px;
+}
+
+.feed-tab__item-gap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  margin: 10px 0;
+  width: 1px;
+  background: #dfdfdf;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(51%, #dfdfdf), to(white));
+  background: linear-gradient(180deg, white, #dfdfdf 51%, white);
+}
+
+.feed-tab-wrapper {
+  background: #fff;
+  margin-bottom: 10px;
+}

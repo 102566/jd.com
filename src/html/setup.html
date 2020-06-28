@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>京东注册</title>
+    <link rel="stylesheet" href="../style/setup/setup.css">
+    <link rel="stylesheet" href="../style/setup/setup1.css">
+    <link rel="stylesheet" href="../style/setup/setup2.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-con w clearfix">
+            <a href="index.html" class="logo " target="_blank">
+            </a>
+            <div class="logo-title">欢迎注册</div>
+            <div class="have-account">已有账号？ <a href="login.html" target="_blank">请登录&gt;</a></div>
+        </div>
+
+    </div>
+
+    <div class="container w">
+        <div class="progress-bar clearfix">
+            <div class="pro-step ">
+                <span class="step-index">1</span>
+                <p class="step-desc">验证手机号</p>
+            </div>
+            <div class="pro-line pro-line1 person-pro-line person-pro-line1 "></div>
+            <div class="pro-step pro-step2 person-pro-step2 cur-step ">
+                <span class="step-index">2</span>
+                <p class="step-desc">填写账号信息</p>
+            </div>
+            <div class="pro-line pro-line2 person-pro-line person-pro-line2 "></div>
+            <div class="pro-step pro-step3 person-pro-step3  ">
+                <span class="step-index">3</span>
+                <p class="step-desc">注册成功</p>
+            </div>
+        </div>
+
+        <div class="main ">
+            <div class="reg-form">
+                <form action="" id="register-form" method="POST" novalidate="novalidate">
+                    <!--chrome autocomplete off bug hack-->
+                    <input style="display:none" name="hack">
+                    <input type="password" style="display:none" name="hack1">
+                    <!--hack end-->
+                    <input type="hidden" name="uuid" id="uuid" value="c4bd76544d4e4f0fba3e9a06ad20f744">
+                    <input type="hidden" name="eid" id="eid" value="7H3MZE24YVHJSGSO2XWWLEQZNKSL5YFRGGZCJVOILZCGHYL2ZG2YA3ENTU4AJL3GK3B3RO67JDPTHMPCQPEHKZ4BIM">
+                    <input type="hidden" name="fp" id="sessionId" value="e90fa827469f3e3cb2537b2a29b7880a">
+                    <input type="hidden" id="jdcom1" name="jdcom1" value="jdcom11593140465157">
+                    <input type="hidden" id="token" name="aQhOKUjJHg" value="lZajX">
+                    <input type="hidden" id="publicKey" name="publicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCbGddyRSw4pUibfpPbekSXfpxHQa4e5p3bPF0dDuMhXq08M1/obrosi6EFo39MI6WuBGmFco8ELtQAQM8yUPnWtYPZgRptKPD2sYzvjjsePMyHx1aGThxqdwrHP8qyKXfiyYbsHoGdW/mWB8CWaG21wgM9LPXX6kVd9ec+GXBCWQIDAQAB">
+                    <input type="hidden" id="source" name="source" value="main">
+                    <input type="hidden" id="closeImageAuthCode" value="${closeImageAuthCode}">
+                    <input type="hidden" id="theme" value="${theme}">
+                    <input type="hidden" id="chineseMobilePattern" value="1[3456789]{1}[0-9]{9}">
+                    <input type="hidden" id="sourceDesc" value="">
+                    <input type="hidden" id="tgId" value="">
+                    <input type="hidden" id="closeEmailCheck" value="">
+                    <input type="hidden" id="emailWhiteList" value="@qq.com,@163.com,@126.com,@Gmail.com,@Sohu.com,@Sina.com,@foxmail.com,@yahoo.com,@139.com,@jd.com,@live.com,@live.cn.@188.com,@189.com,@189.cn,@hotmail.com,@21cn.com,@yeah.net,@tom.com,@sogou.com">
+                    <input type="hidden" id="loginUrl" value="https://passport.jd.com/new/login.aspx?ReturnUrl=https://www.jd.com/">
+                    <input type="hidden" id="backUrl" value="https://www.jd.com/">
+                    <input type="hidden" id="authCodeStrategy" name="authCodeStrategy" value="1">
+                    <input type="hidden" id="en_US" value="false">
+
+                    <input id="slideAppId" value="16dd32e1eb3" type="hidden">
+                    <input id="slideScene" value="reg" type="hidden">
+                    <input id="slideProduct" value="embed" type="hidden">
+                    <input id="slideWidth" value="100%" type="hidden">
+                    <input id="slidePlaceHolder" value="" type="hidden">
+                    <input id="slideSuccessMsg" value="" type="hidden">
+
+                    <input type="hidden" id="popupProtocol" value="1">
+                    <div id="step1-wrap">
+                        <div class="item-phone-wrap">
+                            <div class="form-item form-item-phone">
+                                <label class="select-country" id="select-country" country_id="0086" style="border-top: 1px solid rgb(221, 221, 221); border-right: none rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left: 1px solid rgb(221, 221, 221); border-image: initial;">中国 0086<a href="javascript:void(0) " class="arrow"></a></label>
+                                <div class="item-input-wrap" style="border: 1px solid rgb(221, 221, 221);">
+                                    <txt style="position: absolute; z-index: 2; line-height: 46px; margin-left: 20px;font-size: 14px; font-family: Arial; color: rgb(204, 204, 204); display: inline;">建议使用常用手机号</txt><input type="text" id="form-phone" maxlength="11" name="phone" class="field" placeholder=" " autocomplete="off" default="<i class='i-def'></i>验证完成后，你可以使用该手机登录或找回密码">
+                                    <i class="i-status"></i>
+                                    <i class="i-cancel" style="display: none;"></i>
+                                </div>
+                                <div class="input-tip">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-getcode-wrap">
+                            <div class="form-item form-item-getcode" clstag="pageclick|keycount|reg_puser_201804031|7">
+                                点击按钮进行验证
+                                <div id="slideAuthCode" class="JDValidate-wrap"></div>
+                            </div>
+                            <div class="input-tip">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="item-phonecode-wrap" style="display: none;">
+                            <div class="form-item form-item-phonecode">
+                                <div class="phonecode-left">
+                                    <label>手机验证码</label>
+                                    <input type="text" name="mobileCode" maxlength="6" autocomplete="off" id="phoneCode" class="field phonecode" placeholder="输入验证码">
+                                    <i class="i-status"></i>
+                                    <i class="i-cancel"></i>
+                                </div>
+                                <button id="getPhoneCode" class="btn-phonecode" type="button">重新获取</button>
+                                <div class="input-tip"><span></span></div>
+                                <div class="audio-tip" style="display: none;">收不到短信验证码？点击&nbsp;<span class="get-auth-code" clstag="pageclick|keycount|reg_puser_201804031|13">获取语音验证码</span></div>
+                            </div>
+                        </div>
+                        <div class="form-agreen">
+                        </div>
+                        <div id="step1-next" class="btn-register" clstag="pageclick|keycount|reg_puser_201804031|3">下一步</div>
+                    </div>
+                    <div id="step2-wrap">
+                        <div class="form-item form-item-account" id="form-item-account">
+                            <label>用　户　名</label>
+                            <input type="text" id="form-account" _input="true" name="regName" class="field" autocomplete="off" maxlength="20" placeholder="您的账户名和登录名" default="<i class='i-def'></i>支持中文、英文、数字、“-”、“_”的组合，4-20个字符">
+                            <i class="i-status"></i>
+                            <i class="i-cancel"></i>
+                        </div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <div class="form-item">
+                            <label>设 置 密 码</label>
+                            <input autocomplete="off" type="password" name="pwd" id="form-pwd" _input="true" class="field" maxlength="20" placeholder="建议使用两种或两种以上字符组合" default="<i class='i-def'></i>建议使用字母、数字和符号两种及以上的组合，8-20个字符">
+                            <i class="i-status"></i>
+                            <i class="i-cancel"></i>
+                            <div class="capslock-tip tips">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div>
+                        </div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <div class="form-item">
+                            <label>确 认 密 码</label>
+                            <input type="password" name="pwdRepeat" id="form-equalTopwd" _input="true" class="field" placeholder="请再次输入密码" default="<i class='i-def'></i>请再次输入密码">
+                            <i class="i-status"></i>
+                            <i class="i-cancel"></i>
+                            <div class="capslock-tip tips">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div>
+                        </div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <!-- 默认是none -->
+                        <div class="item-email-wrap" style="display: none;">
+                            <div class="form-item">
+                                <label>邮 箱 验 证</label>
+                                <input type="text" name="email" id="form-email" class="field" autocomplete="off" maxlength="50" placeholder="请输入邮箱" default="<i class='i-def'></i>验证完成后，你可以使用该邮箱登录">
+                                <i class="i-status"></i>
+                                <ul class="suggest-container email-suggest">
+                                    <li class="">
+                                        <div class="value">@qq.com</div>
+                                    </li>
+                                    <li class="">
+                                        <div class="value">@163.com</div>
+                                    </li>
+                                    <li class="">
+                                        <div class="value">@126.com</div>
+                                    </li>
+                                    <li class="">
+                                        <div class="value">@Gmail.com</div>
+                                    </li>
+                                    <li class="">
+                                        <div class="value">@Sohu.com</div>
+                                    </li>
+                                    <li class="suggest-li-last ">
+                                        <div class="value">@Sina.com</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="input-tip">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="item-mailcode-wrap">
+                            <div class="form-item form-item-mailcode">
+                                <div class="mailcode-left">
+                                    <label>邮箱验证码</label>
+                                    <input type="text" name="mailCode" maxlength="6" autocomplete="off" id="mailCode" class="field mailcode" placeholder="请输入邮箱验证码">
+                                    <i class="i-status"></i>
+                                    <i class="i-cancel"></i>
+                                </div>
+                                <button id="getMailCode" class="btn-mailcode" type="button" clstag="pageclick|keycount|reg_puser_201804031|16">获取验证码</button>
+                                <div class="input-tip">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div><button class="btn-register" id="form-register" _submit="true" clstag="pageclick|keycount|reg_puser_201804031|18">立即注册</button></div>
+                        <div class="input-tip">
+                            <span></span>
+                        </div>
+                        <div class="back-btn" id="back-btn">返回上一步</div>
+                    </div>
+                </form>
+                <div id="country_code_layer" style="display: none; top: 708px; left: 1182.5px;"><iframe frameborder="0" scrolling="no" style="background-color:transparent; position: absolute; z-index: -1; width: 100%; height: 100%; top: 0; left:0;"></iframe>
+                    <div>
+                        <a class="arrow"></a>
+                        <div class="search-bar"><b class="search-icon"></b><input type="text" placeholder="搜索您的国家和地区" id="inputSearch"></div>
+                        <div id="result">
+                            <div class="capital-list">
+                                <ul></ul>
+                            </div>
+                            <div class="current-capital"><span id="currentCapital">A</span><span class="line"></span></div>
+                            <div class="country-list">
+                                <div id="scrollbar2" class="scrollbar_all">
+                                    <div class="scrollbar">
+                                        <div class="track">
+                                            <div class="thumb">
+                                                <div class="end"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="viewport">
+                                        <div class="overview">
+                                            <ul></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="no-result">未找到国家或地区</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reg-other clearfix">
+                <a href="//reg.jd.com/e/regPage?source=biguser&amp;tgId=S-qtktaHl2k" class="reg-other-item reg-other-person" clstag="pageclick|keycount|reg_puser_201804031|4">
+                    <i class="reg-ohter-icon"></i>企业用户注册 </a>
+                <a href="//reg.jd.com/p/regPage?source=IBG&amp;ReturnUrl=http%3A//hk.jd.com/" class="reg-other-item reg-other-inter" clstag="pageclick|keycount|reg_puser_201804031|5">
+                    <i class="reg-ohter-icon"></i>海外用户注册 </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="form-footer" class="footer w">
+        <div class="links">
+            <a rel="nofollow" target="_blank" href="javascript:;"> 关于我们</a>|
+            <a rel="nofollow" target="_blank" href="javascript:;">联系我们</a>|
+            <a rel="nofollow" target="_blank" href="javascript:;">人才招聘</a>|
+            <a rel="nofollow" target="_blank" href="javascript:;">商家入驻</a>|
+            <a rel="no  follow" target="_blank" href="javascript:;">广告服务</a>|
+            <a rel="nofollow" target="_blank" href="javascript:;">手机京东</a>|
+            <a target="_blank" href="javascript:;">友情链接</a>|
+            <a target="_blank" href="javascript:;">销售联盟</a>|
+            <a href="javascript:;" target="_blank">京东社区</a>|
+            <a href="javascript:;" target="_blank">京东公益</a>|
+            <a target="_blank" href="javascript:;" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+        </div>
+        <div class="copyright">
+            Copyright©2004-2020&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+        </div>
+    </div>
+</body>
+
+</html>
