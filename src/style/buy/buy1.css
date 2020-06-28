@@ -373,9 +373,6 @@ a:hover {
   font-family: iconfont;
   src: url(../../img/iconfont.eot);
   src: url(../../img/iconfont.eot#iefix) format("embedded-opentype"), url(../../img/iconfont.woff) format("woff"), url(../../img/iconfont.ttf) format("truetype"), url(../../img/buy.svg) format("svg");
-  font-family: languagefont;
-  src: url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.eot?uhzxqo);
-  src: url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.eot?uhzxqo#iefix) format("embedded-opentype"), url(../../img/buyicofont.ttf) format("truetype"), url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.woff?uhzxqo) format("woff"), url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.svg?uhzxqo#icofont) format("svg");
 }
 
 .iconfont {
@@ -1101,27 +1098,6 @@ a:hover {
   width: 82px;
 }
 
-#shortcut-2014 #ttbar-serv .dd {
-  width: 170px;
-  right: 1px;
-  padding: 10px 0;
-}
-
-#shortcut-2014 #ttbar-serv .dd-spacer {
-  width: 82px;
-  right: 0;
-}
-
-#shortcut-2014 #ttbar-serv .item {
-  padding-left: 10px;
-}
-
-#shortcut-2014 #ttbar-serv .item-business {
-  border-top: 1px dotted #eee;
-  padding-top: 5px;
-  margin-top: 5px;
-}
-
 #shortcut-2014 #ttbar-navs .dt {
   width: 49px;
   padding-right: 25px;
@@ -1299,38 +1275,6 @@ a:hover {
   background-image: url(//misc.360buyimg.com/jdf/1.0.0/unit/shortcut/5.0.0/i/ent.sprite.shortcutUserinfo.png);
 }
 
-#shortcut-2014 #ttbar-atte .dt,
-#shortcut-2014 #ttbar-serv .dt {
-  width: 49px;
-  padding-right: 25px;
-}
-
-#shortcut-2014 #ttbar-atte .dd,
-#shortcut-2014 #ttbar-serv .dd {
-  width: 82px;
-  padding-bottom: 8px;
-}
-
-#shortcut-2014 #ttbar-atte .item,
-#shortcut-2014 #ttbar-serv .item {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  width: 70px;
-  padding-left: 15px;
-}
-
-#shortcut-2014 #ttbar-serv .item-business,
-#shortcut-2014 #ttbar-serv .item-client {
-  font-weight: 700;
-  padding-left: 10px;
-  color: #666;
-}
-
-/* 
-#shortcut-2014 .hover .dorpdown-layer {
--webkit-transition: all 600ms cubic-bezier(0.23, 1, .32, 1)
-} */
 .u-place-tip {
   position: absolute;
   left: 0;
@@ -1448,7 +1392,6 @@ a:hover {
   }
   #logo-2014 .logo #categorys-mini .ci-right {
     background-image: url(//misc.360buyimg.com/jdf/1.0.0/unit/global-header/5.0.0/i/down-@2x.png);
-    /* jdf-1.0.0/ myjd.css Date:2020-05-14 19:20:11 */
     /* jdf-1.0.0/ nav.css Date:2020-05-14 19:20:11 */
   }
   #logo-2014 .logo #categorys-mini .ci-right #settleup-2014 .ci-left {
@@ -1743,104 +1686,6 @@ a:hover {
   }
   #logo-2014 .logo #categorys-mini .ci-right #appdownloadTop {
     display: none;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .dt {
-    width: 49px;
-    padding-right: 25px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .dorpdown-layer {
-    width: 280px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .userinfo {
-    padding: 10px 0 10px 15px;
-    overflow: hidden;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .u-pic {
-    float: left;
-    margin-right: 10px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .u-pic img {
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .u-name {
-    padding: 6px 0 0;
-    font-weight: 700;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .orderlist {
-    display: none;
-    background: #000;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .myjdlist2 {
-    border-top: 1px solid #f1f1f1;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .viewlist {
-    width: 250px;
-    padding: 0 15px 10px;
-    border-top: 1px solid #f1f1f1;
-    padding-top: 10px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .viewlist .smt {
-    zoom: 1;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .viewlist .smt h4 {
-    float: left;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .viewlist .smt .extra {
-    float: right;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .viewlist .item {
-    float: left;
-    padding: 4px;
-    line-height: 0;
-    font-size: 0;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .dd-spacer {
-    left: 0;
-    width: 82px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level2 {
-    background-position: 0 -17px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level3 {
-    background-position: 0 -34px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level4 {
-    background-position: 0 -51px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level5 {
-    background-position: 0 -68px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level6 {
-    background-position: 0 -85px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .myjdlist1,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .myjdlist2 {
-    width: 265px;
-    padding: 5px 0 5px 15px;
-    overflow: hidden;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .myjdlist1 .fore1,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .myjdlist1 .fore2,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .myjdlist2 .fore1,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .myjdlist2 .fore2 {
-    float: left;
-    width: 126px;
-  }
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level1,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level2,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level3,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level4,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level5,
-  #logo-2014 .logo #categorys-mini .ci-right #ttbar-myjd .user-level6 {
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    line-height: 17px;
-    vertical-align: middle;
-    margin-left: 5px;
-    background: url(//misc.360buyimg.com/jdf/1.0.0/unit/myjd/5.0.0/i/rank2014.gif);
   }
   #logo-2014 .logo #categorys-mini .ci-right #nav-2014 {
     margin-top: 10px;
@@ -2720,4 +2565,172 @@ a:hover {
 .w1190 #service-2017 .wrap dl,
 .w1200 #service-2017 .wrap dl {
   width: 255px;
+}
+
+#ttbar-myjd .dt {
+  width: 49px;
+  padding-right: 25px;
+}
+
+#ttbar-myjd .dorpdown-layer {
+  width: 280px;
+}
+
+#ttbar-myjd .userinfo {
+  padding: 10px 0 10px 15px;
+  overflow: hidden;
+}
+
+#ttbar-myjd .u-pic {
+  float: left;
+  margin-right: 10px;
+}
+
+#ttbar-myjd .u-pic img {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+#ttbar-myjd .u-name {
+  padding: 6px 0 0;
+  font-weight: 700;
+}
+
+#ttbar-myjd .orderlist {
+  display: none;
+  background: #000;
+}
+
+#ttbar-myjd .myjdlist2 {
+  border-top: 1px solid #f1f1f1;
+}
+
+#ttbar-myjd .viewlist {
+  width: 250px;
+  padding: 0 15px 10px;
+  border-top: 1px solid #f1f1f1;
+  padding-top: 10px;
+}
+
+#ttbar-myjd .viewlist .smt {
+  zoom: 1;
+}
+
+#ttbar-myjd .viewlist .smt h4 {
+  float: left;
+}
+
+#ttbar-myjd .viewlist .smt .extra {
+  float: right;
+}
+
+#ttbar-myjd .viewlist .item {
+  float: left;
+  padding: 4px;
+  line-height: 0;
+  font-size: 0;
+}
+
+#ttbar-myjd .dd-spacer {
+  left: 0;
+  width: 82px;
+}
+
+#ttbar-myjd .user-level2 {
+  background-position: 0 -17px;
+}
+
+#ttbar-myjd .user-level3 {
+  background-position: 0 -34px;
+}
+
+#ttbar-myjd .user-level4 {
+  background-position: 0 -51px;
+}
+
+#ttbar-myjd .user-level5 {
+  background-position: 0 -68px;
+}
+
+#ttbar-myjd .user-level6 {
+  background-position: 0 -85px;
+}
+
+#ttbar-myjd .myjdlist1,
+#ttbar-myjd .myjdlist2 {
+  width: 265px;
+  padding: 5px 0 5px 15px;
+  overflow: hidden;
+}
+
+#ttbar-myjd .myjdlist1 .fore1,
+#ttbar-myjd .myjdlist1 .fore2,
+#ttbar-myjd .myjdlist2 .fore1,
+#ttbar-myjd .myjdlist2 .fore2 {
+  float: left;
+  width: 126px;
+}
+
+#ttbar-myjd .user-level1,
+#ttbar-myjd .user-level2,
+#ttbar-myjd .user-level3,
+#ttbar-myjd .user-level4,
+#ttbar-myjd .user-level5,
+#ttbar-myjd .user-level6 {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  vertical-align: middle;
+  margin-left: 5px;
+  background: url(//misc.360buyimg.com/jdf/1.0.0/unit/myjd/5.0.0/i/rank2014.gif);
+}
+
+#ttbar-serv .dd {
+  width: 170px;
+  right: 1px;
+  padding: 10px 0;
+}
+
+#ttbar-serv .dd-spacer {
+  width: 82px;
+  right: 0;
+}
+
+#ttbar-serv .item {
+  padding-left: 10px;
+}
+
+#ttbar-serv .item-business {
+  border-top: 1px dotted #eee;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+#shortcut-2014 #ttbar-atte .dt,
+#shortcut-2014 #ttbar-serv .dt {
+  width: 49px;
+  padding-right: 25px;
+}
+
+#shortcut-2014 #ttbar-atte .dd,
+#shortcut-2014 #ttbar-serv .dd {
+  width: 170px;
+  right: 1px;
+  padding: 10px 0px;
+}
+
+#shortcut-2014 #ttbar-atte .item,
+#shortcut-2014 #ttbar-serv .item {
+  display: inline-block;
+  width: 68px;
+  padding-left: 10px;
+}
+
+#shortcut-2014 #ttbar-serv .item-business,
+#shortcut-2014 #ttbar-serv .item-client {
+  font-weight: 700;
+  padding-left: 10px;
+  color: #666;
 }

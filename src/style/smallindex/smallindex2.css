@@ -1079,7 +1079,7 @@ a:hover {
 }
 
 #shortcut-2014 #ttbar-serv .dd {
-  width: 170px;
+  width: 170px !important;
   right: 1px;
   padding: 10px 0;
 }
@@ -1292,10 +1292,7 @@ a:hover {
 #shortcut-2014 #ttbar-atte .item,
 #shortcut-2014 #ttbar-serv .item {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  width: 70px;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 #shortcut-2014 #ttbar-serv .item-business,

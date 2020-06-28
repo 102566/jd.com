@@ -364,9 +364,6 @@ a {
     font-family: iconfont;
     src: url(../../img/iconfont.eot);
     src: url(../../img/iconfont.eot#iefix) format("embedded-opentype"), url(../../img/iconfont.woff) format("woff"), url(../../img/iconfont.ttf) format("truetype"), url(../../img/buy.svg) format("svg");
-    font-family: languagefont;
-    src: url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.eot?uhzxqo);
-    src: url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.eot?uhzxqo#iefix) format("embedded-opentype"), url(../../img/buyicofont.ttf) format("truetype"), url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.woff?uhzxqo) format("woff"), url(//misc.360buyimg.com/jdf/1.0.0/unit/global-footer/5.0.0/fonts/icofont.svg?uhzxqo#icofont) format("svg");
 }
 
 .iconfont {
@@ -1033,25 +1030,6 @@ a {
             width: 82px;
         }
     }
-    #ttbar-serv {
-        .dd {
-            width: 170px;
-            right: 1px;
-            padding: 10px 0;
-        }
-        .dd-spacer {
-            width: 82px;
-            right: 0;
-        }
-        .item {
-            padding-left: 10px;
-        }
-        .item-business {
-            border-top: 1px dotted #eee;
-            padding-top: 5px;
-            margin-top: 5px;
-        }
-    }
     #ttbar-navs {
         .dt {
             width: 49px;
@@ -1242,40 +1220,6 @@ only screen and (min-device-pixel-ratio:1.5) {
     height: 50px;
     background-image: url(//misc.360buyimg.com/jdf/1.0.0/unit/shortcut/5.0.0/i/ent.sprite.shortcutUserinfo.png);
 }
-
-#shortcut-2014 #ttbar-atte .dt,
-#shortcut-2014 #ttbar-serv .dt {
-    width: 49px;
-    padding-right: 25px;
-}
-
-#shortcut-2014 #ttbar-atte .dd,
-#shortcut-2014 #ttbar-serv .dd {
-    width: 82px;
-    padding-bottom: 8px;
-}
-
-#shortcut-2014 #ttbar-atte .item,
-#shortcut-2014 #ttbar-serv .item {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    width: 70px;
-    padding-left: 15px;
-}
-
-#shortcut-2014 #ttbar-serv .item-business,
-#shortcut-2014 #ttbar-serv .item-client {
-    font-weight: 700;
-    padding-left: 10px;
-    color: #666;
-}
-
-
-/* 
-#shortcut-2014 .hover .dorpdown-layer {
--webkit-transition: all 600ms cubic-bezier(0.23, 1, .32, 1)
-} */
 
 .u-place-tip {
     position: absolute;
@@ -1693,107 +1637,6 @@ only screen and (min-device-pixel-ratio:1.5) {
             }
             #appdownloadTop {
                 display: none;
-            }
-            /* jdf-1.0.0/ myjd.css Date:2020-05-14 19:20:11 */
-            #ttbar-myjd {
-                .dt {
-                    width: 49px;
-                    padding-right: 25px;
-                }
-                .dorpdown-layer {
-                    width: 280px;
-                }
-                .userinfo {
-                    padding: 10px 0 10px 15px;
-                    overflow: hidden;
-                }
-                .u-pic {
-                    float: left;
-                    margin-right: 10px;
-                    img {
-                        border-radius: 50%;
-                        -moz-border-radius: 50%;
-                        -webkit-border-radius: 50%;
-                    }
-                }
-                .u-name {
-                    padding: 6px 0 0;
-                    font-weight: 700;
-                }
-                .orderlist {
-                    display: none;
-                    background: #000;
-                }
-                .myjdlist2 {
-                    border-top: 1px solid #f1f1f1;
-                }
-                .viewlist {
-                    width: 250px;
-                    padding: 0 15px 10px;
-                    border-top: 1px solid #f1f1f1;
-                    padding-top: 10px;
-                    .smt {
-                        zoom: 1;
-                        h4 {
-                            float: left;
-                        }
-                        .extra {
-                            float: right;
-                        }
-                    }
-                    .item {
-                        float: left;
-                        padding: 4px;
-                        line-height: 0;
-                        font-size: 0;
-                    }
-                }
-                .dd-spacer {
-                    left: 0;
-                    width: 82px;
-                }
-                .user-level2 {
-                    background-position: 0 -17px;
-                }
-                .user-level3 {
-                    background-position: 0 -34px;
-                }
-                .user-level4 {
-                    background-position: 0 -51px;
-                }
-                .user-level5 {
-                    background-position: 0 -68px;
-                }
-                .user-level6 {
-                    background-position: 0 -85px;
-                }
-            }
-            #ttbar-myjd .myjdlist1,
-            #ttbar-myjd .myjdlist2 {
-                width: 265px;
-                padding: 5px 0 5px 15px;
-                overflow: hidden;
-            }
-            #ttbar-myjd .myjdlist1 .fore1,
-            #ttbar-myjd .myjdlist1 .fore2,
-            #ttbar-myjd .myjdlist2 .fore1,
-            #ttbar-myjd .myjdlist2 .fore2 {
-                float: left;
-                width: 126px;
-            }
-            #ttbar-myjd .user-level1,
-            #ttbar-myjd .user-level2,
-            #ttbar-myjd .user-level3,
-            #ttbar-myjd .user-level4,
-            #ttbar-myjd .user-level5,
-            #ttbar-myjd .user-level6 {
-                display: inline-block;
-                width: 17px;
-                height: 17px;
-                line-height: 17px;
-                vertical-align: middle;
-                margin-left: 5px;
-                background: url(//misc.360buyimg.com/jdf/1.0.0/unit/myjd/5.0.0/i/rank2014.gif);
             }
             /* jdf-1.0.0/ nav.css Date:2020-05-14 19:20:11 */
             #nav-2014 {
@@ -2633,4 +2476,155 @@ only screen and (min-device-pixel-ratio:1.5) {
 .w1190 #service-2017 .wrap dl,
 .w1200 #service-2017 .wrap dl {
     width: 255px;
+}
+
+#ttbar-myjd {
+    .dt {
+        width: 49px;
+        padding-right: 25px;
+    }
+    .dorpdown-layer {
+        width: 280px;
+    }
+    .userinfo {
+        padding: 10px 0 10px 15px;
+        overflow: hidden;
+    }
+    .u-pic {
+        float: left;
+        margin-right: 10px;
+        img {
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+        }
+    }
+    .u-name {
+        padding: 6px 0 0;
+        font-weight: 700;
+    }
+    .orderlist {
+        display: none;
+        background: #000;
+    }
+    .myjdlist2 {
+        border-top: 1px solid #f1f1f1;
+    }
+    .viewlist {
+        width: 250px;
+        padding: 0 15px 10px;
+        border-top: 1px solid #f1f1f1;
+        padding-top: 10px;
+        .smt {
+            zoom: 1;
+            h4 {
+                float: left;
+            }
+            .extra {
+                float: right;
+            }
+        }
+        .item {
+            float: left;
+            padding: 4px;
+            line-height: 0;
+            font-size: 0;
+        }
+    }
+    .dd-spacer {
+        left: 0;
+        width: 82px;
+    }
+    .user-level2 {
+        background-position: 0 -17px;
+    }
+    .user-level3 {
+        background-position: 0 -34px;
+    }
+    .user-level4 {
+        background-position: 0 -51px;
+    }
+    .user-level5 {
+        background-position: 0 -68px;
+    }
+    .user-level6 {
+        background-position: 0 -85px;
+    }
+}
+
+#ttbar-myjd .myjdlist1,
+#ttbar-myjd .myjdlist2 {
+    width: 265px;
+    padding: 5px 0 5px 15px;
+    overflow: hidden;
+}
+
+#ttbar-myjd .myjdlist1 .fore1,
+#ttbar-myjd .myjdlist1 .fore2,
+#ttbar-myjd .myjdlist2 .fore1,
+#ttbar-myjd .myjdlist2 .fore2 {
+    float: left;
+    width: 126px;
+}
+
+#ttbar-myjd .user-level1,
+#ttbar-myjd .user-level2,
+#ttbar-myjd .user-level3,
+#ttbar-myjd .user-level4,
+#ttbar-myjd .user-level5,
+#ttbar-myjd .user-level6 {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    vertical-align: middle;
+    margin-left: 5px;
+    background: url(//misc.360buyimg.com/jdf/1.0.0/unit/myjd/5.0.0/i/rank2014.gif);
+}
+
+#ttbar-serv {
+    .dd {
+        width: 170px;
+        right: 1px;
+        padding: 10px 0;
+    }
+    .dd-spacer {
+        width: 82px;
+        right: 0;
+    }
+    .item {
+        padding-left: 10px;
+    }
+    .item-business {
+        border-top: 1px dotted #eee;
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+}
+
+#shortcut-2014 #ttbar-atte .dt,
+#shortcut-2014 #ttbar-serv .dt {
+    width: 49px;
+    padding-right: 25px;
+}
+
+#shortcut-2014 #ttbar-atte .dd,
+#shortcut-2014 #ttbar-serv .dd {
+    width: 170px;
+    right: 1px;
+    padding: 10px 0px;
+}
+
+#shortcut-2014 #ttbar-atte .item,
+#shortcut-2014 #ttbar-serv .item {
+    display: inline-block;
+    width: 68px;
+    padding-left: 10px;
+}
+
+#shortcut-2014 #ttbar-serv .item-business,
+#shortcut-2014 #ttbar-serv .item-client {
+    font-weight: 700;
+    padding-left: 10px;
+    color: #666;
 }
