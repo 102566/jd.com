@@ -1,0 +1,483 @@
+body {
+  font: 12px/150% tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #666;
+  background: #fff;
+}
+
+a,
+address,
+b,
+big,
+blockquote,
+body,
+center,
+cite,
+code,
+dd,
+del,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+label,
+legend,
+li,
+ol,
+p,
+pre,
+small,
+span,
+strong,
+u,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+div {
+  display: block;
+}
+
+var {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+#shortcut-2014 {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #e3e4e5;
+  border-bottom: solid 1px #ddd;
+}
+
+#shortcut-2014 .w {
+  background: #e3e4e5;
+  color: #999;
+}
+
+#shortcut-2014 li {
+  float: left;
+  height: 30px;
+  padding: 0 2px;
+}
+
+#shortcut-2014 #ttbar-home .iconfont {
+  position: relative;
+  display: inline;
+  font-size: 16px;
+  color: #5c5452;
+  padding-right: 5px;
+}
+
+#shortcut-2014 a {
+  color: #999;
+}
+
+#shortcut-2014 .style-red {
+  color: #f30213;
+}
+
+#shortcut-2014 #ttbar-login {
+  margin-right: 10px;
+}
+
+#shortcut-2014 #ttbar-login .link-login {
+  font-family: "verdana,simsun";
+}
+
+#shortcut-2014 li.spacer {
+  width: 1px;
+  height: 12px;
+  margin-top: 9px;
+  padding: 0;
+  background: #ccc;
+  overflow: hidden;
+}
+
+#shortcut-2014 #ttbar-mycity {
+  padding-left: 0;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter {
+  margin: 10px 0 10px 10px;
+}
+
+#shortcut-2014 #ttbar-mycity .dt {
+  padding: 0 25px 0 10px;
+}
+
+#shortcut-2014 #ttbar-mycity .iconfont {
+  position: relative;
+  display: inline;
+  font-size: 14px;
+  color: #5c5452;
+}
+
+#shortcut-2014 #ttbar-mycity .dorpdown-layer {
+  *left: 0;
+}
+
+#shortcut-2014 #ttbar-mycity .dd {
+  width: 301px;
+  padding: 10px 0 10px 10px;
+}
+
+#shortcut-2014 #ttbar-mycity .dd-spacer {
+  left: 0;
+  width: 75px;
+  _width: 76px;
+}
+
+#shortcut-2014 #ttbar-mycity .item {
+  float: left;
+  width: 60px;
+  padding: 2px 0;
+}
+
+#shortcut-2014 #ttbar-mycity .item a {
+  float: left;
+  padding: 0 8px;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_ico_global {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: 12px;
+  margin-top: -1px;
+  background-image: url(../../img/ct.png);
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_ico_russia {
+  background-repeat: no-repeat;
+  background-position: -20px 0;
+  background-image: url(../../img/ct.png);
+  border: solid 1px #ebebeb;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_ico_indonesia {
+  background-repeat: no-repeat;
+  background-position: 0 -17px;
+  background-image: url(../../img/ct.png);
+  border: solid 1px #ebebeb;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_ico_spain {
+  background-repeat: no-repeat;
+  background-position: -40px 0;
+  background-image: url(../../img/ct.png);
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_ico_thailand {
+  background-repeat: no-repeat;
+  background-position: -20px -17px;
+  background-image: url(../../img/ct.png);
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_ico {
+  float: left;
+  position: relative;
+  top: 7px;
+  margin-right: 8px;
+  width: 15px;
+  height: 10px;
+  border: solid 1px transparent;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_list {
+  overflow: hidden;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_split {
+  width: 262px;
+  height: 0;
+  border-bottom: dotted 1px #eee;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_desc {
+  margin: 9px 0;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_item {
+  float: left;
+  width: 145px;
+  height: 26px;
+  padding: 0;
+  line-height: 26px;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_lk {
+  display: block;
+  overflow: hidden;
+}
+
+#shortcut-2014 #ttbar-mycity .areamini_inter_name {
+  float: left;
+  width: 120px;
+}
+
+#shortcut-2014 #ttbar-mycity .dt {
+  float: left;
+  padding: 0 8px;
+}
+
+#shortcut-2014 li.dorpdown {
+  z-index: 13;
+}
+
+#shortcut-2014 .dorpdown:hover .dorpdown-layer {
+  display: block;
+  border-top: none;
+}
+
+#shortcut-2014 .dorpdown:hover {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+#shortcut-2014 .dt {
+  float: left;
+  padding: 0 8px;
+}
+
+#shortcut-2014 .dorpdown-layer {
+  top: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+  *left: 1px;
+}
+
+#shortcut-2014 .dd {
+  line-height: 24px;
+}
+
+#shortcut-2014 .dd-spacer {
+  position: absolute;
+  top: -7px;
+  height: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+#shortcut-2014 li.dorpdown {
+  z-index: 13;
+}
+
+#shortcut-2014 #ttbar-ent {
+  position: relative;
+}
+
+#shortcut-2014 #ttbar-ent .dt {
+  width: 49px;
+  padding-right: 25px;
+}
+
+#shortcut-2014 #ttbar-ent .dd {
+  left: 1px;
+  width: 140px;
+  padding: 10px 0 10px 15px;
+}
+
+#shortcut-2014 #ttbar-ent .dd-spacer {
+  width: 82px;
+  left: 0;
+}
+
+#shortcut-2014 #ttbar-ent .item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 56px;
+  white-space: nowrap;
+}
+
+#shortcut-2014 .dd-spacer {
+  position: absolute;
+  top: -7px;
+  height: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+#shortcut-2014 #ttbar-atte .dt,
+#shortcut-2014 #ttbar-serv .dt {
+  width: 49px;
+  padding-right: 25px;
+}
+
+#shortcut-2014 #ttbar-serv {
+  position: relative;
+}
+
+#shortcut-2014 #ttbar-serv .dd {
+  width: 170px;
+  right: 1px;
+  padding: 10px 0;
+}
+
+#shortcut-2014 #ttbar-serv .dd-spacer {
+  width: 82px;
+  right: 0;
+}
+
+#shortcut-2014 #ttbar-serv .item-business,
+#shortcut-2014 #ttbar-serv .item-client {
+  font-weight: 700;
+  padding-left: 10px;
+  color: #666;
+}
+
+#shortcut-2014 #ttbar-serv .item {
+  padding-left: 10px;
+}
+
+#shortcut-2014 #ttbar-serv .item-business {
+  border-top: 1px dotted #eee;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+#ttbar-myjd .dt {
+  width: 49px;
+  padding-right: 25px;
+}
+
+#ttbar-myjd .dorpdown-layer {
+  width: 280px;
+}
+
+#ttbar-myjd .dd-spacer {
+  left: 0;
+  width: 82px;
+}
+
+#ttbar-myjd .myjdlist1,
+#ttbar-myjd .myjdlist2 {
+  width: 265px;
+  padding: 5px 0 5px 15px;
+  overflow: hidden;
+}
+
+#ttbar-myjd .myjdlist1 .fore1,
+#ttbar-myjd .myjdlist1 .fore2,
+#ttbar-myjd .myjdlist2 .fore1,
+#ttbar-myjd .myjdlist2 .fore2 {
+  float: left;
+  width: 126px;
+}
+
+#ttbar-myjd .myjdlist2 {
+  border-top: 1px solid #f1f1f1;
+}
+
+#ttbar-myjd .viewlist {
+  width: 250px;
+  padding: 0 15px 10px;
+  border-top: 1px solid #f1f1f1;
+  padding-top: 10px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.root61 .w,
+.w1210 .w {
+  width: 1210px;
+}
+
+.w {
+  width: 990px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fr .cw-icon .iconfont {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+}
+
+.iconfont {
+  font-family: iconfont;
+  font-style: normal;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cw-icon {
+  position: relative;
+  cursor: default;
+  zoom: 1;
+}
+
+.cw-icon .i,
+.cw-icon i {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+
+.dorpdown-layer {
+  display: none;
+  position: absolute;
+}
+
+element.style {
+  left: auto;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
