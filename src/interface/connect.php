@@ -5,7 +5,7 @@
         'host'=>'localhost:3306',
         'sql_username' => 'root',
         'sql_userpassword'=>'chq1024',
-        'table_name' => 'study'
+        'table_name' => 'jd'
     );
 
     $mysqli = new mysqli($mysql_myLogin['host'],$mysql_myLogin['sql_username'],$mysql_myLogin['sql_userpassword']);
