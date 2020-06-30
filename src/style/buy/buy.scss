@@ -52,3 +52,64 @@
     background: url(//misc.360buyimg.com/user/cart/css/i/act/act-20170618.png) 0 0 no-repeat;
     margin-left: 35px;
 }
+
+.cart-filter-bar .cart-store {
+    float: right;
+}
+
+.cart-store {
+    position: relative;
+    z-index: 5;
+    *z-index: 3;
+    display: inline-block;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 122px;
+}
+
+input[type="hidden"] {
+    display: none;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
+}
+
+#jdarea {
+    position: relative;
+    float: left;
+    z-index: 3;
+    height: 26px;
+    cursor: default;
+    margin: 0;
+}
+
+.ui-area-wrap .ui-area-text-wrap {
+    float: left;
+    position: relative;
+    top: 0;
+    height: 23px;
+    background: #fff;
+    border: 1px solid #CECBCE;
+    padding: 0 24px 0 4px;
+    line-height: 23px;
+    overflow: hidden;
+}
+
+.ui-area-wrap .ui-area-content-wrap.ui-area-w-max {
+    width: 460px;
+}
+
+.ui-area-wrap .ui-area-content-wrap {
+    display: none;
+    float: left;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    border: 1px solid #CECBCE;
+    width: 390px;
+    padding: 12px 12px 15px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 5px #ddd;
+}

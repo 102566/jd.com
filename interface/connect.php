@@ -19,13 +19,13 @@
     if(!$mydata){
         die('连接数据库错误'.$mysqli->error);
     }
-    $sql = "select * from jd.com"; //将查询语句赋值给$sql变量 '这里的studytarget' 是表格名字;
+    $sql = "select * from shop"; //将查询语句赋值给$sql变量 '这里的studytarget' 是表格名字;
     $result = $mysqli->query($sql);
 
     $arr = array();
     while($result_one = $result->fetch_assoc()){
         Array_push($arr,$result_one);
-    }
+    };
 
     $json = json_encode($arr);
 

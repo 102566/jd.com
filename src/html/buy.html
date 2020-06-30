@@ -445,26 +445,425 @@
 
 
     <div id="container" class="cart" ecarddg="0" cartalwaysdg="0" t="0">
+
         <div class="w">
             <div id="chunjie" class="mb10"></div>
-            <input type="hidden" id="isLogin" value="0">
-            <input id="hidebx" type="hidden" value="1">
-            <div class="cart-empty">
-                <div class="message">
-                    <ul>
-                        <li class="txt">
-                            购物车内暂时没有商品，登录后将显示您之前加入的商品
-                        </li>
-                        <li>
-                            <a href="login.html" class="btn-1 login-btn mr10">登录</a>
-                            <a href="index.html" class="ftx-05" target="_blank">
-                    去购物&gt;
-                </a>
-                        </li>
-                    </ul>
+            <div class="cart-filter-bar">
+                <ul class="switch-cart">
+                    <li class="switch-cart-item curr">
+                        <a href="//cart.jd.com/cart.action">
+                            <em>全部商品</em>
+                            <span class="number">1</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="cart-store">
+                    <input id="hiddenLocationId" type="hidden">
+                    <input id="hiddenLocation" type="hidden">
+                    <span class="label">配送至：</span>
+                    <div id="jdarea" class="ui-area-wrap ui-area-oversea-mode">
+                        <div class="ui-area-text-wrap">
+                            <div class="ui-area-text" data-id="15-1158-1224-56291" title="浙江宁波市慈溪市白沙路街道">浙江宁波市慈溪市白沙路街道</div>
+                            <b>
+				</b>
+                        </div>
+                        <div class="ui-area-content-wrap ui-area-w-max" style="left: -300px;">
+                            <div class="ui-area-tab"><a class="ui-switchable-item" data-id="15" title="浙江"><em>浙江</em><i></i></a><a class="ui-switchable-item" data-id="1158" title="宁波市"><em>宁波市</em><i></i></a><a class="ui-switchable-item" data-id="1224" title="慈溪市"><em>慈溪市</em><i></i></a>
+                                <a class="ui-switchable-item ui-area-current" data-id="56291" title="白沙路街道"><em>白沙路街道</em><i></i></a>
+                            </div>
+                            <div class="ui-area-content" clstag="clickcart|keycount|xincart|cart_changeArea">
+                                <div style="display: none;" class="ui-switchable-panel" data-index="0">
+                                    <ul class="ui-area-content-list">
+                                        <li><a data-id="1" href="javascript:void(0)">北京</a></li>
+                                        <li><a data-id="2" href="javascript:void(0)">上海</a></li>
+                                        <li><a data-id="3" href="javascript:void(0)">天津</a></li>
+                                        <li><a data-id="4" href="javascript:void(0)">重庆</a></li>
+                                        <li><a data-id="5" href="javascript:void(0)">河北</a></li>
+                                        <li><a data-id="6" href="javascript:void(0)">山西</a></li>
+                                        <li><a data-id="7" href="javascript:void(0)">河南</a></li>
+                                        <li><a data-id="8" href="javascript:void(0)">辽宁</a></li>
+                                        <li><a data-id="9" href="javascript:void(0)">吉林</a></li>
+                                        <li><a data-id="10" href="javascript:void(0)">黑龙江</a></li>
+                                        <li><a data-id="11" href="javascript:void(0)">内蒙古</a></li>
+                                        <li><a data-id="12" href="javascript:void(0)">江苏</a></li>
+                                        <li><a data-id="13" href="javascript:void(0)">山东</a></li>
+                                        <li><a data-id="14" href="javascript:void(0)">安徽</a></li>
+                                        <li class="ui-area-current"><a data-id="15" href="javascript:void(0)">浙江</a></li>
+                                        <li><a data-id="16" href="javascript:void(0)">福建</a></li>
+                                        <li><a data-id="17" href="javascript:void(0)">湖北</a></li>
+                                        <li><a data-id="18" href="javascript:void(0)">湖南</a></li>
+                                        <li><a data-id="19" href="javascript:void(0)">广东</a></li>
+                                        <li><a data-id="20" href="javascript:void(0)">广西</a></li>
+                                        <li><a data-id="21" href="javascript:void(0)">江西</a></li>
+                                        <li><a data-id="22" href="javascript:void(0)">四川</a></li>
+                                        <li><a data-id="23" href="javascript:void(0)">海南</a></li>
+                                        <li><a data-id="24" href="javascript:void(0)">贵州</a></li>
+                                        <li><a data-id="25" href="javascript:void(0)">云南</a></li>
+                                        <li><a data-id="26" href="javascript:void(0)">西藏</a></li>
+                                        <li><a data-id="27" href="javascript:void(0)">陕西</a></li>
+                                        <li><a data-id="28" href="javascript:void(0)">甘肃</a></li>
+                                        <li><a data-id="29" href="javascript:void(0)">青海</a></li>
+                                        <li><a data-id="30" href="javascript:void(0)">宁夏</a></li>
+                                        <li><a data-id="31" href="javascript:void(0)">新疆</a></li>
+                                        <li><a data-id="52993" href="javascript:void(0)">港澳</a></li>
+                                        <li><a data-id="32" href="javascript:void(0)">台湾</a></li>
+                                        <li><a data-id="84" href="javascript:void(0)">钓鱼岛</a></li>
+                                        <li><a data-id="53283" href="javascript:void(0)">海外</a></li>
+                                    </ul>
+                                </div>
+                                <div style="display: none;" class="ui-switchable-panel" data-index="1">
+                                    <ul class="ui-area-content-list">
+                                        <li class="ui-area-current"><a data-id="1158" href="javascript:void(0)">宁波市</a></li>
+                                        <li><a data-id="1273" href="javascript:void(0)">衢州市</a></li>
+                                        <li><a data-id="1280" href="javascript:void(0)">丽水市</a></li>
+                                        <li><a data-id="1290" href="javascript:void(0)">台州市</a></li>
+                                        <li><a data-id="1298" href="javascript:void(0)">舟山市</a></li>
+                                        <li><a data-id="1213" href="javascript:void(0)">杭州市</a></li>
+                                        <li><a data-id="1233" href="javascript:void(0)">温州市</a></li>
+                                        <li><a data-id="1243" href="javascript:void(0)">嘉兴市</a></li>
+                                        <li><a data-id="1250" href="javascript:void(0)">湖州市</a></li>
+                                        <li><a data-id="1255" href="javascript:void(0)">绍兴市</a></li>
+                                        <li><a data-id="1262" href="javascript:void(0)">金华市</a></li>
+                                    </ul>
+                                </div>
+                                <div style="display: none;" class="ui-switchable-panel" data-index="2">
+                                    <ul class="ui-area-content-list">
+                                        <li><a data-id="46341" href="javascript:void(0)">北仑区</a></li>
+                                        <li class="ui-area-current"><a data-id="1224" href="javascript:void(0)">慈溪市</a></li>
+                                        <li><a data-id="1226" href="javascript:void(0)">奉化区</a></li>
+                                        <li class="long-area"><a data-id="4253" href="javascript:void(0)">高新科技开发区</a></li>
+                                        <li><a data-id="3412" href="javascript:void(0)">海曙区</a></li>
+                                        <li><a data-id="46344" href="javascript:void(0)">江北区</a></li>
+                                        <li><a data-id="3413" href="javascript:void(0)">江东区</a></li>
+                                        <li><a data-id="1227" href="javascript:void(0)">宁海县</a></li>
+                                        <li><a data-id="1228" href="javascript:void(0)">象山县</a></li>
+                                        <li><a data-id="46343" href="javascript:void(0)">鄞州区</a></li>
+                                        <li><a data-id="46345" href="javascript:void(0)">余姚市</a></li>
+                                        <li><a data-id="46342" href="javascript:void(0)">镇海区</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ui-switchable-panel ui-switchable-panel-selected" data-index="3">
+                                    <ul class="ui-area-content-list">
+                                        <li class="ui-area-current"><a data-id="56291" href="javascript:void(0)">白沙路街道</a></li>
+                                        <li><a data-id="46479" href="javascript:void(0)">长河镇</a></li>
+                                        <li><a data-id="51589" href="javascript:void(0)">城区</a></li>
+                                        <li><a data-id="46480" href="javascript:void(0)">崇寿镇</a></li>
+                                        <li><a data-id="46488" href="javascript:void(0)">慈东工业区</a></li>
+                                        <li><a data-id="46481" href="javascript:void(0)">附海镇</a></li>
+                                        <li><a data-id="46473" href="javascript:void(0)">观海卫镇</a></li>
+                                        <li><a data-id="56292" href="javascript:void(0)">古塘街道</a></li>
+                                        <li><a data-id="46489" href="javascript:void(0)">杭州湾新区</a></li>
+                                        <li class="long-area"><a data-id="59395" href="javascript:void(0)">慈溪市农垦场</a></li>
+                                        <li><a data-id="59396" href="javascript:void(0)">慈溪市林场</a></li>
+                                        <li><a data-id="46477" href="javascript:void(0)">横河镇</a></li>
+                                        <li><a data-id="56290" href="javascript:void(0)">浒山街道</a></li>
+                                        <li><a data-id="46482" href="javascript:void(0)">匡堰镇</a></li>
+                                        <li><a data-id="56289" href="javascript:void(0)">坎墩街道</a></li>
+                                        <li><a data-id="46474" href="javascript:void(0)">龙山镇</a></li>
+                                        <li><a data-id="46483" href="javascript:void(0)">桥头镇</a></li>
+                                        <li><a data-id="46475" href="javascript:void(0)">胜山镇</a></li>
+                                        <li><a data-id="46484" href="javascript:void(0)">天元镇</a></li>
+                                        <li><a data-id="46476" href="javascript:void(0)">逍林镇</a></li>
+                                        <li><a data-id="46485" href="javascript:void(0)">新浦镇</a></li>
+                                        <li><a data-id="46486" href="javascript:void(0)">掌起镇</a></li>
+                                        <li><a data-id="46487" href="javascript:void(0)">周巷镇</a></li>
+                                        <li><a data-id="56288" href="javascript:void(0)">宗汉街道</a></li>
+                                        <li><a data-id="46478" href="javascript:void(0)">庵东镇</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+                <div class="w-line">
+                    <div class="floater" style="width: 79px; left: 0px;"></div>
+                </div>
+                <div class="tab-con ui-switchable-panel-selected" style="display: block;"></div>
+                <div class="tab-con hide" style="display: none;"></div>
+            </div>
+        </div>
+
+        <div class="cart-warp">
+            <div class="w">
+                <div id="jd-cart">
+                    <div class="cart-main cart-main-new">
+                        <div class="cart-thead">
+                            <!-- 我的冰箱 -->
+                            <div class="column t-checkbox">
+                                <div class="cart-checkbox">
+                                    <input type="checkbox" id="toggle-checkboxes_up" name="toggle-checkboxes" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_allCheck" checked="checked">
+                                    <label class="checked" for="">勾选全部商品</label>
+                                </div>
+                                全选
+                            </div>
+                            <div class="column t-goods">商品</div>
+                            <div class="column t-props"></div>
+                            <div class="column t-price">单价</div>
+                            <div class="column t-quantity">数量</div>
+                            <div class="column t-sum">小计</div>
+                            <div class="column t-action">操作</div>
+                        </div>
+                        <div id="cart-list">
+                            <input type="hidden" id="allSkuIds" value="46318765895">
+                            <input type="hidden" id="outSkus" value="">
+                            <input type="hidden" id="isLogin" value="1">
+                            <input type="hidden" id="isNoSearchStockState" value="0">
+                            <input type="hidden" id="isNoDD" value="0">
+                            <input type="hidden" id="isNoCoupon" value="0">
+                            <input type="hidden" id="isFavoriteDowngrade" value="0">
+                            <input type="hidden" id="isUnmarketDowngrade" value="0">
+                            <input type="hidden" id="isPriceNoticeDowngrade" value="0">
+                            <input type="hidden" id="isInstallmentDowngrade" value="0">
+                            <input type="hidden" id="headNoticeDg" value="0">
+                            <input type="hidden" id="isNoVenderFreight" value="0">
+                            <input type="hidden" id="isNoZyDelivery" value="0">
+                            <input type="hidden" id="isNoPopDelivery" value="0">
+                            <input type="hidden" id="isNoXzyf" value="0">
+                            <input type="hidden" id="isNoXzyfCd" value="0">
+                            <input type="hidden" id="isGiftServiceDowngrade" value="0">
+                            <input type="hidden" id="newUser" value="1">
+                            <input type="hidden" id="hiddenLocationId">
+                            <input type="hidden" id="hiddenLocation">
+                            <input type="hidden" id="ids" value="46318765895">
+                            <input type="hidden" id="isNgsdg" value="0">
+                            <input type="hidden" id="isCssdg" value="0">
+                            <input type="hidden" id="isCsudg" value="0">
+                            <input type="hidden" id="isRgdg" value="0">
+                            <input type="hidden" id="isOpdg" value="0">
+                            <input type="hidden" id="isYydg" value="0">
+                            <input type="hidden" id="overseasLoc" value="0">
+                            <input type="hidden" id="isOadg" value="0">
+                            <input type="hidden" id="isMdxxdg" value="0">
+                            <input type="hidden" id="isWmdg" value="0">
+                            <input type="hidden" id="isLdg" value="0">
+                            <input type="hidden" id="isPsydg" value="0">
+                            <input type="hidden" id="isSgdg" value="0">
+                            <input type="hidden" id="isqqgdg" value="">
+                            <input type="hidden" id="iscardg" value="0">
+                            <input type="hidden" id="istoOrder" value="1">
+                            <!-- 修改数量之前的值 -->
+                            <input type="hidden" id="changeBeforeValue" value="">
+                            <input type="hidden" id="changeBeforeId" value="">
+                            <input type="hidden" id="coord" value="">
+                            <input type="hidden" value="1" id="checkedCartState">
+                            <input type="hidden" value="0" id="overseaSelectedCount">
+                            <input type="hidden" value="1" id="noOverseaSelectedCount">
+                            <input type="hidden" value="10148555" id="venderIds">
+                            <input type="hidden" value="" id="fictPopSkuIds">
+                            <input type="hidden" value="10148555" id="fictVenderIds">
+                            <input type="hidden" value="" id="zySkuCid">
+                            <input type="hidden" value="46318765895_9711_1_1_false_10148555_1" id="couponParam">
+                            <input type="hidden" value="" id="businessLinkSkuIds">
+                            <input type="hidden" value="10148555" id="venderFreightIds">
+                            <input type="hidden" value="699.00" id="venderTotals">
+                            <input type="hidden" value="2" id="uclass">
+                            <input type="hidden" value="0.00" id="freshTotalPrice" autocomplete="off">
+                            <input type="hidden" value="0.00" id="notFreshTotalPrice" autocomplete="off">
+                            <input type="hidden" value="0.00" id="walmartTotalPrice" autocomplete="off">
+                            <input type="hidden" value="1593502910534" id="currentTime">
+                            <input type="hidden" value="false" id="isShowDepreNotice">
+                            <input type="hidden" value="0" id="isJcLo">
+                            <input type="hidden" value="-1" id="rlk">
+                            <input type="hidden" value="1" id="isSsdgHttp">
+                            <input type="hidden" value="30" id="limitOpdgThreshold">
+                            <!-- cartAsyc -->
+                            <input type="hidden" value="0" id="isOpAsyc">
+                            <input type="hidden" value="0" id="isJcAsyc">
+                            <input type="hidden" value="0" id="isVenderAsyc">
+                            <!-- 需要引用的全局信息 -->
+                            <div class="cart-item-list" id="cart-item-list-01">
+                                <div class="cart-tbody" id="vender_10148555">
+                                    <div class="shop">
+                                        <div class="cart-checkbox">
+                                            <input type="checkbox" checked="checked" name="checkShop" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_shop">
+                                            <label for="">勾选店铺内全部商品</label>
+                                        </div>
+                                        <span class="shop-txt">
+												<a class="shop-name" href="http://mall.jd.com/index-994459.html" target="_blank" id="venderId_10148555" clstag="clickcart|keycount|xincart|cart_shopName" shopid="994459">优恩米服装专营店</a><a class="btn-im" _vid="10148555" href="javascript:;" clstag="pageclick|keycount|cart__201503041|4">联系客服</a>
+									</span><span class="shop-coupon" name="J_vendershop_10148555"><a class="shop-coupon-btn" id="coupon_10148555" href="javascript:;" clstag="pageclick|keycount|201508251|7">优惠券</a></span>
+                                        <div class="shop-extra-r" id="shop-extra-r_10148555" totalprice="699.00" checkedskuids="46318765895"></div>
+                                    </div>
+                                    <div class="item-list" style="z-index: auto;">
+                                        <!--单品-->
+                                        <!-- 单品-->
+                                        <!-- 京配 -->
+                                        <!-- 单品-->
+                                        <!-- 京配 -->
+                                        <!-- 单品-->
+                                        <!-- 京配 -->
+                                        <!-- 单品-->
+                                        <!-- 京配 -->
+                                        <!-- 单品-->
+                                        <!-- 京配 -->
+                                        <div class="item-single  item-item  item-selected " product="1" select="1" calop="1" id="product_46318765895" num="1" jdbx="" skuid="46318765895" venderid="10148555" zy="false" flashpurchase="false" calculatestock="true" oversea="false" sid="1343" cid="9711"
+                                            cm="" plus95discount="false" paralleldiscount="0.00" balanceamount="" ts="1593502189817" pnc="false" pnct="" pncs="" pncn="" cancelplus="false" dt="4" shopid="994459" style="z-index: auto;">
+                                            <div class="item-form">
+                                                <div class="cell p-checkbox">
+                                                    <div class="cart-checkbox">
+                                                        <!--单品-->
+                                                        <input p-type="46318765895_1" type="checkbox" name="checkItem" value="46318765895_1" checked="checked" data-bind="cbid" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_sku">
+                                                        <label for="" class="checked">勾选商品</label>
+                                                        <span class="line-circle"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="cell p-goods">
+                                                    <div class="goods-item">
+                                                        <div class="p-img">
+                                                            <a href="//item.jd.com/46318765895.html" target="_blank" class="J_zyyhq_46318765895" pnc="false" pncs="">
+                                                                <img alt="SRN轻奢女装 名媛小香风时尚休闲套装2020夏季新款时尚休闲西服裤子两件套女 杏色 L" clstag="clickcart|keycount|xincart|cart_sku_pic" src="//img10.360buyimg.com/cms/s80x80_jfs/t1/37764/36/5641/123826/5cc2b5a4E27a6f1af/fb53835c3361fa76.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item-msg">
+                                                            <div class="p-name">
+                                                                <a clstag="clickcart|keycount|xincart|cart_sku_name" href="//item.jd.com/46318765895.html" target="_blank">
+																																								SRN轻奢女装 名媛小香风时尚休闲套装2020夏季新款时尚休闲西服裤子两件套女 杏色 L
+							</a>
+                                                            </div>
+                                                            <div class="p-extend p-extend-new">
+                                                                <span class="promise" _yanbao="yanbao_46318765895_" _service="service_46318765895_" isproduct="1"><i class="jd-service-icon"></i><a data-tips="选服务" class="ftx-03 jd-service" href="#none">选服务</a></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell p-props p-props-new">
+                                                    <div class="props-txt" title="杏色">杏色</div>
+                                                    <div class="props-txt" title="L" t="${product.mainSku.sizeDesc}">L</div>
+                                                </div>
+                                                <div class="cell p-price p-price-new 
+																																">
+                                                    <p class="plus-switch">
+                                                        <strong>¥699.00</strong>
+                                                    </p>
+                                                    <div>
+                                                        <div class="clr"></div>
+                                                    </div>
+                                                    <p class="mt5" jj="">
+                                                    </p>
+                                                    <p class="mt5" bt=""></p>
+                                                </div>
+                                                <div class="cell p-quantity">
+                                                    <!--单品-->
+                                                    <div class="quantity-form">
+                                                        <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_down" class="decrement disabled" id="decrement_10148555_46318765895_1_1">-</a>
+                                                        <input autocomplete="off" type="text" class="itxt" value="1" id="changeQuantity_10148555_46318765895_1_1_0" minnum="1">
+                                                        <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_up" class="increment " id="increment_10148555_46318765895_1_1_0">+</a>
+                                                    </div>
+                                                    <div class="ac ftx-03 quantity-txt" _stock="stock_46318765895">有货</div>
+                                                </div>
+                                                <div class="cell p-sum">
+                                                    <strong>¥699.00</strong>
+                                                </div>
+                                                <div class="cell p-ops">
+                                                    <!--单品-->
+                                                    <a id="remove_10148555_46318765895_1" clstag="clickcart|keycount|xincart|cart_sku_del" data-name="SRN轻奢女装 名媛小香风时尚休闲套装2020夏..." data-more="removed_699.00_1" class="cart-remove" href="javascript:void(0);" ob="false">删除</a>
+                                                    <a href="javascript:void(0);" class="cart-follow" id="follow_10148555_46318765895_1" clstag="clickcart|keycount|xincart|cart_sku_guanzhu" ob="false">移到我的关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="item-extra mb10">
+
+
+                                                <!-- 落地配服务 -->
+                                            </div>
+                                            <div class="item-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="isSsgdg" value="0"> </div>
+                    </div>
+                </div>
+                <div id="cart-floatbar">
+                    <div class="ui-ceilinglamp-1" style="width: 990px; height: 52px;">
+                        <div class="cart-toolbar" style="width: 988px; height: 50px;">
+                            <div class="toolbar-wrap">
+                                <div class="selected-item-list hide" style="display: none;">
+                                </div>
+                                <div class="options-box">
+                                    <div class="select-all">
+                                        <div class="cart-checkbox">
+                                            <input type="checkbox" id="toggle-checkboxes_down" name="toggle-checkboxes" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_allCheckDown" checked="checked">
+                                            <label class="checked" for="">勾选全部商品</label>
+                                        </div>全选
+                                    </div>
+                                    <div class="operation">
+                                        <a href="#none" clstag="clickcart|keycount|xincart|cart_somesku_del" class="remove-batch">删除选中商品</a>
+                                        <a href="#none" class="follow-batch" clstag="clickcart|keycount|xincart|cart_somesku_guanzhu">移到关注</a>
+                                        <a href="#none" class="cleaner-opt J_clr_all" title="亲，点我可快速清理购物车商品哦！">清理购物车</a>
+                                    </div>
+                                    <div class="clr"></div>
+                                    <div class="toolbar-right toolbar-right-new">
+                                        <div class="normal">
+                                            <div class="comm-right">
+                                                <div class="btn-area">
+                                                    <a href="javascript:void(0);" onclick="return false;" clstag="clickcart|keycount|xincart|cart_gotoOrder" class="submit-btn" data-bind="1">
+								去结算<b></b></a>
+                                                </div>
+                                                <div class="price-sum">
+                                                    <div>
+                                                        <span class="txt txt-new">总价：</span>
+                                                        <span class="price sumPrice">
+										<em data-bind="699.00">¥699.00</em>
+									</span>
+                                                        <b class="ml5 price-tips"></b>
+                                                        <div class="price-tipsbox-new" style="left: 77.7813px; display: none;">
+                                                            <div class="ui-tips-main">不含运费及送装服务费</div>
+                                                            <span class="price-tipsbox-arrow"></span>
+                                                        </div>
+                                                        <br>
+                                                        <div id="price-sum-extra-1" class="price-sum-extra"><span class="">促销：</span><span class="">-¥0.00</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="amount-sum">
+                                                    已选择<em>1</em>件商品<b class="up" clstag="clickcart|keycount|xincart|cart_thumbnailOpen"></b>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                        </div>
+                                        <div class="combine" style="display: none;">
+                                            <div class="comm-right">
+                                                <div class="btn-area">
+                                                    <a href="javascript:void(0);" onclick="return false;" clstag="clickcart|keycount|xincart|cart_gotoOrderOut" class="jdInt-submit-btn-hd">
+								去海囤全球结算<b></b></a>
+                                                    <a href="javascript:void(0);" onclick="return false;" clstag="clickcart|keycount|xincart|cart_gotoOrder" class="common-submit-btn">
+								去京东结算<b></b></a>
+                                                </div>
+                                                <div class="price-sum">
+                                                    <div>
+                                                        <span class="txt txt-new">总价：</span>
+                                                        <span class="price sumPrice">
+										<em data-bind="699.00">¥699.00</em>
+									</span>
+                                                        <b class="ml5 price-tips"></b>
+                                                        <div class="price-tipsbox-new" style="display: none; left: 159.85px;">
+                                                            <div class="ui-tips-main">不含运费及送装服务费</div>
+                                                            <span class="price-tipsbox-arrow"></span>
+                                                        </div>
+                                                        <br>
+                                                        <div id="price-sum-extra-2" class="price-sum-extra"><span class="">促销：</span><span class="">-¥0.00</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="amount-sum">
+                                                    已选择<em>1</em>件商品<b class="up"></b>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                            <div class="clr"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-removed">
+                    <div class="r-tit">已删除商品，您可以重新购买或加关注：</div>
                 </div>
             </div>
         </div>
+
+
         <div class="w">
             <div class="m m1" id="c-tabs-new">
                 <div class="mt">

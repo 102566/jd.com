@@ -8,8 +8,8 @@
     $arr = array();
 
     while($row = $result->fetch_assoc()){
-        array_push($arr,$row)
-    }
+        array_push($arr,$row);
+    };
 
     $json = json_encode($arr);
     echo $json;
