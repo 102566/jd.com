@@ -19,7 +19,7 @@
     if(!$mydata){
         die('连接数据库错误'.$mysqli->error);
     }
-    $sql = "select * from studytarget"; //将查询语句赋值给$sql变量 '这里的studytarget' 是表格名字;
+    $sql = "select * from jd.com"; //将查询语句赋值给$sql变量 '这里的studytarget' 是表格名字;
     $result = $mysqli->query($sql);
 
     $arr = array();
