@@ -6,11 +6,13 @@ define(['jquery', 'cookie'], function($, cookie) {
         render: function() {
             let shop = cookie.get('shop');
             if (shop) {
+
                 shop = JSON.parse(shop);
-                console.log(shop);
+
                 console.log(shop);
                 let idlist = shop.map(elm => elm.id).join();
-                // console.log(idlist);
+                $('.number').html(shop.length);
+                $('.amount-sum>em').html(shop.length);
                 $.ajax({
                     type: "get",
                     url: `${baseUrl}/interface/buy.php`,
@@ -77,18 +79,18 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 <div class="cell p-quantity">
                                     <!--单品-->
                                     <div class="quantity-form">
-                                        <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_down" class="decrement " id="decrement_10148555_46318765895_1_1">-</a>
-                                        <input autocomplete="off" type="text" class="itxt" value="${sumnum}" id="changeQuantity_10148555_46318765895_1_1_0" minnum="1">
-                                        <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_up" class="increment " id="increment_10148555_46318765895_1_1_0">+</a>
+                                        <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_down" class="decrement " id="asdf${elm.id}">-</a>
+                                        <input autocomplete="off" type="text" class="itxt" value="${sumnum}" minnum="1" maxnum="${elm.num}">
+                                        <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_up" class="increment " id="asd${elm.id}">+</a>
                                     </div>
-                                    <div class="ac ftx-03 quantity-txt" _stock="stock_46318765895">有货</div>
+                                    <div class="ac ftx-03 quantity-txt" _stock="stock_46318765895">还剩${elm.num}件</div>
                                 </div>
                                 <div class="cell p-sum">
                                     <strong>￥${(elm.price*sumnum).toFixed(2)}</strong>
                                 </div>
                                 <div class="cell p-ops">
                                     <!--单品-->
-                                    <a id="remove_10148555_46318765895_1" clstag="clickcart|keycount|xincart|cart_sku_del" data-name="${elm.title}" data-more="removed_699.00_1" class="cart-remove" href="javascript:void(0);" ob="false">删除</a>
+                                    <a id="asdfg${elm.id}" class="cart-remove" href="javascript:void(0);" ob="false">删除</a>
                                     <a href="javascript:void(0);" class="cart-follow" id="follow_10148555_46318765895_1" clstag="clickcart|keycount|xincart|cart_sku_guanzhu" ob="false">移到我的关注</a>
                                 </div>
                             </div>
@@ -104,7 +106,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                             `
                         });
                         $('.item-list').append(str);
-                        $('.sumPrice>em').text(`${addup}`)
+                        $('.sumPrice>em').text(`${addup}`);
                     }
                 });
                 $('.item-list').on('click', '.jdcheckbox', function() {
@@ -113,11 +115,17 @@ define(['jquery', 'cookie'], function($, cookie) {
                         let all = (+$('.sumPrice>em').html());
                         let sum = (+$(this).parents('.item-form').children('.p-sum').children('strong').text().slice(1));
                         let res = all + sum;
+                        let appSum = $('.amount-sum>em').html();
+                        appSum++;
+                        $('.amount-sum>em').html(appSum);
                         $('.sumPrice>em').html(res);
                     } else {
                         let all = (+$('.sumPrice>em').html());
                         let sum = (+$(this).parents('.item-form').children('.p-sum').children('strong').text().slice(1));
                         let res = all - sum;
+                        let appSum = $('.amount-sum>em').html();
+                        appSum--;
+                        $('.amount-sum>em').html(appSum);
                         $('.sumPrice>em').html(res);
                     }
                 })
@@ -132,11 +140,125 @@ define(['jquery', 'cookie'], function($, cookie) {
                             res += (+elm.innerHTML.slice(1))
                         })
                         $('.sumPrice>em').html(res);
+                        $('.amount-sum>em').html(shop.length);
                     }
                 })
                 $('.item-list').on('click', '.increment', function() {
-                    let num = 0;
-                    console.log($(this).siblings());
+                    let _id = this.id.replace(/asd/, '');
+                    let _flag = $(this).parents('.p-quantity').siblings('.p-checkbox').children('.cart-checkbox').children('input')[0].checked;
+                    let num = (+$(this).siblings('.itxt').val());
+                    let nummax = (+$(this).siblings('.itxt').attr('maxnum'));
+                    let res = 0;
+                    if (num < nummax) {
+                        num++;
+                    }
+                    let _price = $(this).parents('.p-quantity').siblings('.p-price').children('p').children('strong').html().slice(1)
+                    let _lastPrice = _price * num;
+                    $(this).siblings('.itxt').val(num);
+
+
+                    $(this).parents('.p-quantity').siblings('.p-sum').children('strong').html('￥' + _lastPrice + ".00");
+                    Array.from($('.p-sum>strong')).forEach(elm => {
+                        res += (+elm.innerHTML.slice(1))
+                    })
+                    if (_flag) {
+                        $('.sumPrice>em').html(res);
+                    }
+                    shop.forEach(elm => {
+                        if (elm.id == _id) {
+                            elm.num = num;
+                        }
+                    })
+                    cookie.set('shop', JSON.stringify(shop), 1)
+                })
+                $('.item-list').on('click', '.decrement', function() {
+
+                    let _id = this.id.replace(/asdf/, '');
+                    let num = (+$(this).siblings('.itxt').val());
+                    let _price = $(this).parents('.p-quantity').siblings('.p-price').children('p').children('strong').html().slice(1)
+                    let res = 0;
+                    if (num > 1) {
+                        num--;
+                    }
+                    let _lastPrice = _price * num;
+                    let _flag = $(this).parents('.p-quantity').siblings('.p-checkbox').children('.cart-checkbox').children('input')[0].checked;
+                    $(this).parents('.p-quantity').siblings('.p-sum').children('strong').html('￥' + _lastPrice + ".00");
+
+                    $(this).siblings('.itxt').val(num);
+
+
+                    Array.from($('.p-sum>strong')).forEach(elm => {
+                        res += (+elm.innerHTML.slice(1))
+                    })
+                    if (_flag) {
+                        $('.sumPrice>em').html(res);
+                    }
+                    shop.forEach(elm => {
+                        if (elm.id == _id) {
+                            elm.num = num;
+                        }
+                    })
+                    cookie.set('shop', JSON.stringify(shop), 1)
+                })
+
+                $('.item-list').on('click', '.cart-remove', function() {
+                    let _id = this.id.replace(/asdfg/, '');
+                    let flag = confirm('确定吗');
+                    let _shop = [];
+                    let res = 0;
+                    if (flag) {
+                        $(this).parents('.item-single').remove();
+                        shop.forEach(elm => {
+                            if (elm.id != _id) {
+                                _shop.push(elm);
+                            }
+                        })
+                        cookie.set('shop', JSON.stringify(_shop), 1)
+                    }
+                    Array.from($('.p-sum>strong')).forEach(elm => {
+                        res += (+elm.innerHTML.slice(1))
+                    })
+                    $('.sumPrice>em').html(res);
+                    location.reload();
+                })
+
+                $('.item-list').on('input', '.itxt', function() {
+                    let num = (+$(this).val());
+                    let nummax = $(this).attr('maxnum');
+                    let res = 0;
+                    let _flag = $(this).parents('.p-quantity').siblings('.p-checkbox').children('.cart-checkbox').children('input')[0].checked;
+                    if (num > nummax) {
+                        num = nummax;
+                        $(this).val(nummax);
+                    }
+                    if (num < 1) {
+                        num = 1;
+                        $(this).val(1);
+                    }
+                    let _price = $(this).parents('.p-quantity').siblings('.p-price').children('p').children('strong').html().slice(1);
+                    let _lastPrice = _price * num;
+                    $(this).parents('.p-quantity').siblings('.p-sum').children('strong').html('￥' + _lastPrice + ".00");
+                    Array.from($('.p-sum>strong')).forEach(elm => {
+                        res += (+elm.innerHTML.slice(1))
+                    })
+                    if (_flag) {
+                        $('.sumPrice>em').html(res);
+                    }
+                })
+
+                $('.cleaner-opt').on('click', function() {
+                    let flag = confirm('确定吗');
+                    let _shop = [];
+                    let res = 0;
+                    if (flag) {
+                        $(this).parents('.item-single').remove();
+                        cookie.set('shop', JSON.stringify(_shop), 1)
+                    }
+                    location.reload();
+                    Array.from($('.p-sum>strong')).forEach(elm => {
+                        res += (+elm.innerHTML.slice(1))
+                    })
+                    $('.sumPrice>em').html(res);
                 })
             }
         }

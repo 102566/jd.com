@@ -29,11 +29,11 @@ define(['jquery', 'cookie'], function($, cookie) {
                         <a id="spec-backward" href="javascript:;" class="arrow-next disabled"><i class="sprite-arrow-next"></i></a>
                         <div id="spec-list" class="spec-items">
                             <ul class="lh">
-                                <li class="img-hover"><img alt="${res.title}" src="../img/xq2.jpg" data-url="jfs/t1/64026/17/7986/328492/5d5e3dc0E64ebde31/6800575673ac231d.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="../img/xq3.jpg" data-url="jfs/t1/44077/4/12606/218122/5d5e3dbeE4cf95582/d7639da1f3ecaffa.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="../img/xq4.jpg" data-url="jfs/t1/67890/10/2969/74960/5d135f69E0cdb42e8/d088cb84d7d28b27.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="../img/xq5.jpg" data-url="jfs/t1/78324/4/7908/87876/5d5e3dbdEb1c3ba48/2559ea3a77ac4d97.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="../img/xq6.jpg" data-url="jfs/t1/42767/31/12827/172126/5d5e3dbeEbd334550/9a6271846393f9fa.jpg" data-img="1" width="50" height="50"></li>
+                                <li class="img-hover"><img alt="${res.title}" src="${baseUrl}/src/${pic[2].src}" data-url="jfs/t1/64026/17/7986/328492/5d5e3dc0E64ebde31/6800575673ac231d.jpg" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[3].src}" data-url="jfs/t1/44077/4/12606/218122/5d5e3dbeE4cf95582/d7639da1f3ecaffa.jpg" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[4].src}" data-url="jfs/t1/67890/10/2969/74960/5d135f69E0cdb42e8/d088cb84d7d28b27.jpg" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[5].src}" data-url="jfs/t1/78324/4/7908/87876/5d5e3dbdEb1c3ba48/2559ea3a77ac4d97.jpg" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[6].src}" data-url="jfs/t1/42767/31/12827/172126/5d5e3dbeEbd334550/9a6271846393f9fa.jpg" data-img="1" width="50" height="50"></li>
                             </ul>
                         </div>
                     </div>
@@ -321,31 +321,31 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 <div class="item" data-sku="61671923405" data-value="1.0米餐边柜" title="1.0米餐边柜">
                                     <b></b>
                                     <a href="#none" clstag="shangpin|keycount|product|yanse-1.0米餐边柜">
-                                        <img data-img="1" src="../img/xq11.jpg" width="40" height="40" alt="1.0米餐边柜"><i>1.0米餐边柜</i>
+                                        <img data-img="1" src="${baseUrl}/src/${pic[2].src}" width="40" height="40" alt="1.0米餐边柜"><i>红</i>
                                     </a>
                                 </div>
                                 <div class="item" data-sku="61671923406" data-value="1.2米餐边柜" title="1.2米餐边柜">
                                     <b></b>
                                     <a href="#none" clstag="shangpin|keycount|product|yanse-1.2米餐边柜">
-                                        <img data-img="1" src="../img/xq12.jpg" width="40" height="40" alt="1.2米餐边柜"><i>1.2米餐边柜</i>
+                                        <img data-img="1" src="${baseUrl}/src/${pic[3].src}" width="40" height="40" alt="1.2米餐边柜"><i>绿</i>
                                     </a>
                                 </div>
                                 <div class="item" data-sku="61671923407" data-value="1.6米餐边柜" title="1.6米餐边柜">
                                     <b></b>
                                     <a href="#none" clstag="shangpin|keycount|product|yanse-1.6米餐边柜">
-                                        <img data-img="1" src="../img/xq13.jpg" width="40" height="40" alt="1.6米餐边柜"><i>1.6米餐边柜</i>
+                                        <img data-img="1" src="${baseUrl}/src/${pic[4].src}" width="40" height="40" alt="1.6米餐边柜"><i>蓝</i>
                                     </a>
                                 </div>
                                 <div class="item" data-sku="61671923408" data-value="2.0米餐边柜" title="2.0米餐边柜">
                                     <b></b>
                                     <a href="#none" clstag="shangpin|keycount|product|yanse-2.0米餐边柜">
-                                        <img data-img="1" src="../img/xq14.jpg" width="40" height="40" alt="2.0米餐边柜"><i>2.0米餐边柜</i>
+                                        <img data-img="1" src="${baseUrl}/src/${pic[5].src}" width="40" height="40" alt="2.0米餐边柜"><i>黑</i>
                                     </a>
                                 </div>
                                 <div class="item  selected" data-sku="61671923409" data-value="2.4米餐边柜" title="2.4米餐边柜">
                                     <b></b>
                                     <a href="#none" clstag="shangpin|keycount|product|yanse-2.4米餐边柜">
-                                        <img data-img="1" src="../img/xq15.jpg" width="40" height="40" alt="2.4米餐边柜"><i>2.4米餐边柜</i>
+                                        <img data-img="1" src="${baseUrl}/src/${pic[6].src}" width="40" height="40" alt="2.4米餐边柜"><i>白</i>
                                     </a>
                                 </div>
                             </div>
@@ -486,19 +486,19 @@ define(['jquery', 'cookie'], function($, cookie) {
                     <div class="track-con" data-rid="902029" style="position: relative; width: 150px; height: 564px; overflow: hidden;">
                         <ul clstag="shangpin|keycount|product|kanleyoukan_2" style="position: absolute; width: 150px; height: 2820px; top: 0px; left: 0px;">
                             <li data-clk="//knicks.jd.com/log/server?t=rec_common_clk&amp;v=type=rec.902029$src=rec$action=1$reqsig=8211d0477520f7e7460b8209d04e0c4f5a0a7dcd$enb=1$sku=61671923409$p=902029$pin=$uuid=2549545790$csku=61823261901$index=0$st=0$adcli=$expid=0$mexpid=$im=$rid=482474876051260042$ver=1$sig=9631c1829b5d7b44d0f064b9a054d40b072ecf7f" data-push="1" style="float: left;">
-                                <a target="_blank" title="2020流行窗帘遮光北欧简约卧室客厅飘窗网红成品高档大气美式轻奢 咖色 5.0米布帘一套/双开（适用于2.0米轨长2." href="//item.jd.com/61823261901.html"> <img height="150" width="150" alt="2020流行窗帘遮光北欧简约卧室客厅飘窗网红成品高档大气美式轻奢 咖色 5.0米布帘一套/双开（适用于2.0米轨长2." src="../img/xq18.jpg">
+                                <a target="_blank" title="2020流行窗帘遮光北欧简约卧室客厅飘窗网红成品高档大气美式轻奢 咖色 5.0米布帘一套/双开（适用于2.0米轨长2." href="//item.jd.com/61823261901.html"> <img height="150" width="150" alt="2020流行窗帘遮光北欧简约卧室客厅飘窗网红成品高档大气美式轻奢 咖色 5.0米布帘一套/双开（适用于2.0米轨长2." src="${baseUrl}/src/${pic[7].src}">
                                     <div>2020流行窗帘遮光北欧简约卧室客厅飘窗网红成品高档大气美式轻奢 咖色 5.0米布帘一套/双开（适用于2.0米轨长2.</div>
                                     <p class="J-p-61823261901">￥1062.00</p>
                                 </a>
                             </li>
                             <li data-clk="//knicks.jd.com/log/server?t=rec_common_clk&amp;v=type=rec.902029$src=rec$action=1$reqsig=8211d0477520f7e7460b8209d04e0c4f5a0a7dcd$enb=1$sku=61671923409$p=902029$pin=$uuid=2549545790$csku=61823222241$index=1$st=0$adcli=$expid=0$mexpid=$im=$rid=482474876051260042$ver=1$sig=6f43c1d8a495bf82dd0e5233565d3e37613e08df" data-push="2" style="float: left;">
-                                <a target="_blank" title="【成品套餐】新款欧式大气客厅窗帘双层豪华窗幔成品卧室定制纱帘 有凤来仪-黄 12个花位/4米布＋纱适合1.8－2.2的杆长" href="//item.jd.com/61823222241.html"> <img height="150" width="150" alt="【成品套餐】新款欧式大气客厅窗帘双层豪华窗幔成品卧室定制纱帘 有凤来仪-黄 12个花位/4米布＋纱适合1.8－2.2的杆长" src="../img/xq19.jpg">
+                                <a target="_blank" title="【成品套餐】新款欧式大气客厅窗帘双层豪华窗幔成品卧室定制纱帘 有凤来仪-黄 12个花位/4米布＋纱适合1.8－2.2的杆长" href="//item.jd.com/61823222241.html"> <img height="150" width="150" alt="【成品套餐】新款欧式大气客厅窗帘双层豪华窗幔成品卧室定制纱帘 有凤来仪-黄 12个花位/4米布＋纱适合1.8－2.2的杆长" src="${baseUrl}/src/${pic[8].src}">
                                     <div>【成品套餐】新款欧式大气客厅窗帘双层豪华窗幔成品卧室定制纱帘 有凤来仪-黄 12个花位/4米布＋纱适合1.8－2.2的杆长</div>
                                     <p class="J-p-61823222241">￥1780.00</p>
                                 </a>
                             </li>
                             <li data-clk="//knicks.jd.com/log/server?t=rec_common_clk&amp;v=type=rec.902029$src=rec$action=1$reqsig=8211d0477520f7e7460b8209d04e0c4f5a0a7dcd$enb=1$sku=61671923409$p=902029$pin=$uuid=2549545790$csku=60561648649$index=2$st=0$adcli=$expid=0$mexpid=$im=$rid=482474876051260042$ver=1$sig=4106404331048da3c022a864bb9da4eed0a124b3" data-push="3" style="float: left;">
-                                <a target="_blank" title="不锈钢手纸盒卫生间厕所纸巾盒免打孔卷纸筒抽纸厕纸盒防水置物架 150mm白色（免打孔）" href="//item.jd.com/60561648649.html"> <img height="150" width="150" alt="不锈钢手纸盒卫生间厕所纸巾盒免打孔卷纸筒抽纸厕纸盒防水置物架 150mm白色（免打孔）" src="../img/xq20.jpg">
+                                <a target="_blank" title="不锈钢手纸盒卫生间厕所纸巾盒免打孔卷纸筒抽纸厕纸盒防水置物架 150mm白色（免打孔）" href="//item.jd.com/60561648649.html"> <img height="150" width="150" alt="不锈钢手纸盒卫生间厕所纸巾盒免打孔卷纸筒抽纸厕纸盒防水置物架 150mm白色（免打孔）" src="${baseUrl}/src/${pic[9].src}">
                                     <div>不锈钢手纸盒卫生间厕所纸巾盒免打孔卷纸筒抽纸厕纸盒防水置物架 150mm白色（免打孔）</div>
                                     <p class="J-p-60561648649">￥114.00</p>
                                 </a>
