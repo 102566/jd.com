@@ -1,17 +1,19 @@
 let baseUrl = "http://localhost/jd.com";
 
 
-define(['jquery'], function($) {
+define(['jquery', 'cookie'], function($, cookie) {
     "use strict";
     return {
         render: function() {
             let id = location.search.split('=')[1];
+            let num1;
             $.ajax({
                 type: "get",
                 url: `${baseUrl}/interface/thing.php?id=${id}`,
                 dataType: "json",
                 success: function(res) {
                     let pic = JSON.parse(res.pic);
+                    num1 = res.num;
                     let str = `
             <div class="preview-wrap">
                 <div class="preview" id="preview">
@@ -454,7 +456,7 @@ define(['jquery'], function($) {
                                 <a class="btn-add" href="#none" data-disabled="1">+</a>
                             </div>
                         </div>
-                        <a href="//cart.jd.com/gate.action?pid=61671923409&amp;pcount=1&amp;ptype=1" id="InitCartUrl" class="btn-special1 btn-lg" target="_blank">加入购物车</a>
+                        <div  id="InitCartUrl" class="btn-special1 btn-lg" target="_blank">加入购物车</div>
                     </div>
                     <div id="local-tips" class="summary-tips hide" style="display: none;">
                         <div class="dt">本地活动</div>
@@ -588,7 +590,9 @@ define(['jquery'], function($) {
             });
             let addnum = parseInt($('.buy-num').val());
             $('.product-intro').on('click', '.btn-add', function() {
-                addnum++;
+                if (addnum < num1) {
+                    addnum++;
+                }
                 $('.buy-num').val(addnum);
                 if (addnum > 1) {
                     $('.btn-reduce').removeClass('disabled');
@@ -605,6 +609,29 @@ define(['jquery'], function($) {
                 }
             });
 
+
+            $('.product-intro').on('click', '.btn-lg', function() {
+                let shop = cookie.get('shop');
+                let product = {
+                    id: id,
+                    num: addnum
+                }
+                if (shop) {
+                    shop = JSON.parse(shop);
+                    if (shop.some(elm => elm.id == id)) {
+                        shop.forEach(elm => {
+                            elm.id == id ? elm.num = addnum : null;
+                        })
+                    } else {
+                        shop.push(product)
+                    }
+                } else {
+                    shop = [];
+                    shop.push(product);
+                }
+                cookie.set('shop', JSON.stringify(shop), 1);
+                return false;
+            })
         }
     }
 })

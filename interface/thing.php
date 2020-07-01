@@ -12,4 +12,6 @@
     $json = json_encode($res);
 
     echo $json;
+
+    $mysqli->close();
 ?>

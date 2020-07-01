@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style/buy/buy1.min.css">
     <link rel="stylesheet" href="../style/buy/buy2.min.css">
     <link rel="stylesheet" href="../style/buy/buy4.min.css">
+    <script src="../../node_modules/requirejs/require.js" data-main="../js/buy.main"></script>
 </head>
 
 <body>
@@ -589,7 +590,7 @@
                 <div id="jd-cart">
                     <div class="cart-main cart-main-new">
                         <div class="cart-thead">
-                            <!-- 我的冰箱 -->
+
                             <div class="column t-checkbox">
                                 <div class="cart-checkbox">
                                     <input type="checkbox" id="toggle-checkboxes_up" name="toggle-checkboxes" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_allCheck" checked="checked">
@@ -642,7 +643,7 @@
                             <input type="hidden" id="isqqgdg" value="">
                             <input type="hidden" id="iscardg" value="0">
                             <input type="hidden" id="istoOrder" value="1">
-                            <!-- 修改数量之前的值 -->
+
                             <input type="hidden" id="changeBeforeValue" value="">
                             <input type="hidden" id="changeBeforeId" value="">
                             <input type="hidden" id="coord" value="">
@@ -667,16 +668,15 @@
                             <input type="hidden" value="-1" id="rlk">
                             <input type="hidden" value="1" id="isSsdgHttp">
                             <input type="hidden" value="30" id="limitOpdgThreshold">
-                            <!-- cartAsyc -->
+
                             <input type="hidden" value="0" id="isOpAsyc">
                             <input type="hidden" value="0" id="isJcAsyc">
                             <input type="hidden" value="0" id="isVenderAsyc">
-                            <!-- 需要引用的全局信息 -->
+
                             <div class="cart-item-list" id="cart-item-list-01">
                                 <div class="cart-tbody" id="vender_10148555">
                                     <div class="shop">
                                         <div class="cart-checkbox">
-                                            <input type="checkbox" checked="checked" name="checkShop" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_shop">
                                             <label for="">勾选店铺内全部商品</label>
                                         </div>
                                         <span class="shop-txt">
@@ -685,23 +685,11 @@
                                         <div class="shop-extra-r" id="shop-extra-r_10148555" totalprice="699.00" checkedskuids="46318765895"></div>
                                     </div>
                                     <div class="item-list" style="z-index: auto;">
-                                        <!--单品-->
-                                        <!-- 单品-->
-                                        <!-- 京配 -->
-                                        <!-- 单品-->
-                                        <!-- 京配 -->
-                                        <!-- 单品-->
-                                        <!-- 京配 -->
-                                        <!-- 单品-->
-                                        <!-- 京配 -->
-                                        <!-- 单品-->
-                                        <!-- 京配 -->
-                                        <div class="item-single  item-item  item-selected " product="1" select="1" calop="1" id="product_46318765895" num="1" jdbx="" skuid="46318765895" venderid="10148555" zy="false" flashpurchase="false" calculatestock="true" oversea="false" sid="1343" cid="9711"
-                                            cm="" plus95discount="false" paralleldiscount="0.00" balanceamount="" ts="1593502189817" pnc="false" pnct="" pncs="" pncn="" cancelplus="false" dt="4" shopid="994459" style="z-index: auto;">
+                                        <!-- 
+                                        <div class="item-single  item-item  item-selected " j oversea="false" sid="1343" cid="9711" style="z-index: auto;">
                                             <div class="item-form">
                                                 <div class="cell p-checkbox">
                                                     <div class="cart-checkbox">
-                                                        <!--单品-->
                                                         <input p-type="46318765895_1" type="checkbox" name="checkItem" value="46318765895_1" checked="checked" data-bind="cbid" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_sku">
                                                         <label for="" class="checked">勾选商品</label>
                                                         <span class="line-circle"></span>
@@ -711,7 +699,7 @@
                                                     <div class="goods-item">
                                                         <div class="p-img">
                                                             <a href="//item.jd.com/46318765895.html" target="_blank" class="J_zyyhq_46318765895" pnc="false" pncs="">
-                                                                <img alt="SRN轻奢女装 名媛小香风时尚休闲套装2020夏季新款时尚休闲西服裤子两件套女 杏色 L" clstag="clickcart|keycount|xincart|cart_sku_pic" src="//img10.360buyimg.com/cms/s80x80_jfs/t1/37764/36/5641/123826/5cc2b5a4E27a6f1af/fb53835c3361fa76.jpg">
+                                                                <img alt="SRN轻奢女装 名媛小香风时尚休闲套装2020夏季新款时尚休闲西服裤子两件套女 杏色 L" clstag="clickcart|keycount|xincart|cart_sku_pic" src="../img/buy.jpg">
                                                             </a>
                                                         </div>
                                                         <div class="item-msg">
@@ -743,7 +731,7 @@
                                                     <p class="mt5" bt=""></p>
                                                 </div>
                                                 <div class="cell p-quantity">
-                                                    <!--单品-->
+
                                                     <div class="quantity-form">
                                                         <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_down" class="decrement disabled" id="decrement_10148555_46318765895_1_1">-</a>
                                                         <input autocomplete="off" type="text" class="itxt" value="1" id="changeQuantity_10148555_46318765895_1_1_0" minnum="1">
@@ -755,7 +743,7 @@
                                                     <strong>¥699.00</strong>
                                                 </div>
                                                 <div class="cell p-ops">
-                                                    <!--单品-->
+
                                                     <a id="remove_10148555_46318765895_1" clstag="clickcart|keycount|xincart|cart_sku_del" data-name="SRN轻奢女装 名媛小香风时尚休闲套装2020夏..." data-more="removed_699.00_1" class="cart-remove" href="javascript:void(0);" ob="false">删除</a>
                                                     <a href="javascript:void(0);" class="cart-follow" id="follow_10148555_46318765895_1" clstag="clickcart|keycount|xincart|cart_sku_guanzhu" ob="false">移到我的关注</a>
                                                 </div>
@@ -763,10 +751,13 @@
                                             <div class="item-extra mb10">
 
 
-                                                <!-- 落地配服务 -->
+
                                             </div>
                                             <div class="item-line"></div>
-                                        </div>
+
+                                        </div> -->
+
+
                                     </div>
                                 </div>
                             </div>
@@ -803,7 +794,7 @@
                                                     <div>
                                                         <span class="txt txt-new">总价：</span>
                                                         <span class="price sumPrice">
-										<em data-bind="699.00">¥699.00</em>
+										<em data-bind="699.00">¥0.00</em>
 									</span>
                                                         <b class="ml5 price-tips"></b>
                                                         <div class="price-tipsbox-new" style="left: 77.7813px; display: none;">
@@ -815,7 +806,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="amount-sum">
-                                                    已选择<em>1</em>件商品<b class="up" clstag="clickcart|keycount|xincart|cart_thumbnailOpen"></b>
+                                                    已选择<em>0</em>件商品<b class="up" clstag="clickcart|keycount|xincart|cart_thumbnailOpen"></b>
                                                 </div>
                                                 <div class="clr"></div>
                                             </div>
@@ -832,8 +823,7 @@
                                                     <div>
                                                         <span class="txt txt-new">总价：</span>
                                                         <span class="price sumPrice">
-										<em data-bind="699.00">¥699.00</em>
-									</span>
+										<em data-bind="0.00">¥0.00</em></span>
                                                         <b class="ml5 price-tips"></b>
                                                         <div class="price-tipsbox-new" style="display: none; left: 159.85px;">
                                                             <div class="ui-tips-main">不含运费及送装服务费</div>

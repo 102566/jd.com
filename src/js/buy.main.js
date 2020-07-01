@@ -1,7 +1,7 @@
 require.config({
     paths: {
         jquery: '../../node_modules/jquery/dist/jquery.min',
-        index: './thing/thing',
+        index: './buy/buy',
         cookie: './cookie'
     }
 })
