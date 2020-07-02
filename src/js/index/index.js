@@ -329,7 +329,8 @@ define(['jquery', 'cookie'], function($, cookie) {
             let timer;
             $($('.seckill-brand .slider_indicators_btn')[0]).on('click', prev)
             $($('.seckill-brand .slider_indicators_btn')[1]).on('click', next)
-            $('.seckill-brand .slider_list').hover(stop, start);
+            console.log($('.seckill-brand .slider_list'));
+            $('.seckill-brand').hover(stop, start);
 
             function prev() {
                 flag = !flag;
@@ -343,7 +344,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                 left -= step;
                 $('.seckill-brand .slider_wrapper').animate({
                     left: left
-                }, 800)
+                }, 600)
             }
 
             function next() {
@@ -358,11 +359,11 @@ define(['jquery', 'cookie'], function($, cookie) {
                 left += step;
                 $('.seckill-brand .slider_wrapper').animate({
                     left: left
-                }, 800)
+                }, 600)
             }
 
             function start() {
-                timer = setInterval(prev, 1500)
+                timer = setInterval(prev, 2000)
             }
 
             function stop() {
