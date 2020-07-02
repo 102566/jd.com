@@ -208,8 +208,10 @@ define(['jquery', 'cookie'], function($, cookie) {
         buycar: function() {
             let shop = cookie.get('shop');
             let username = cookie.get('username');
-            shop = JSON.parse(shop);
-            $('.cw-icon .ci-count').html(shop.length);
+            if (shop) {
+                shop = JSON.parse(shop);
+                $('.cw-icon .ci-count').html(shop.length);
+            }
             if (username) {
                 $('#ttbar-login .link-login').html('你好,' + username);
                 $('#ttbar-login .link-login').removeAttr('href');
@@ -297,6 +299,76 @@ define(['jquery', 'cookie'], function($, cookie) {
             function stop() {
                 clearInterval(timer);
             }
+            start();
+        },
+        tab_head: function() {
+            $('.grid_c1 .tab_head_item').hover(function() {
+                $('.grid_c1 .tab_head_item').removeClass('active');
+                $(this).addClass('active');
+            }, function() {
+                $('.grid_c1 .tab_head_item').removeClass('active');
+            })
+            $('#J_top .tab_head_item').hover(function() {
+                $('#J_top .tab_head_item').removeClass('active');
+                $(this).addClass('active');
+            }, function() {
+                $('#J_top .tab_head_item').removeClass('active');
+            })
+            $('.more2 .feed-tab__item').hover(function() {
+                $('.more2 .feed-tab__item').removeClass('feed-tab__item--active ');
+                $(this).addClass('feed-tab__item--active ');
+            }, function() {
+                $('.more2 .feed-tab__item').removeClass('feed-tab__item--active ');
+            })
+
+        },
+        slider_4: function() {
+            let flag = false;
+            let step = 180;
+            let left = -180;
+            let timer;
+            $($('.seckill-brand .slider_indicators_btn')[0]).on('click', prev)
+            $($('.seckill-brand .slider_indicators_btn')[1]).on('click', next)
+            $('.seckill-brand .slider_list').hover(stop, start);
+
+            function prev() {
+                flag = !flag;
+                if (left == -540) {
+                    left = -180;
+                    $('.seckill-brand .slider_wrapper').css('left', left);
+                }
+
+                $('.seckill-brand .slider_indicators_btn').removeClass('slider_indicators_btn_active')
+                $($('.seckill-brand .slider_indicators_btn')[Number(flag)]).addClass('slider_indicators_btn_active');
+                left -= step;
+                $('.seckill-brand .slider_wrapper').animate({
+                    left: left
+                }, 800)
+            }
+
+            function next() {
+                flag != flag;
+                if (left == -180) {
+                    index = 1;
+                    left = -540;
+                    $('.seckill-brand .slider_wrapper').css('left', left);
+                }
+                $('.seckill-brand .slider_indicators_btn').removeClass('slider_indicators_btn_active')
+                $($('.seckill-brand .slider_indicators_btn')[Number(flag)]).addClass('slider_indicators_btn_active');
+                left += step;
+                $('.seckill-brand .slider_wrapper').animate({
+                    left: left
+                }, 800)
+            }
+
+            function start() {
+                timer = setInterval(prev, 1500)
+            }
+
+            function stop() {
+                clearInterval(timer);
+            }
+
             start();
         }
     }

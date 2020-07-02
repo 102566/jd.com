@@ -14,4 +14,6 @@ require(['index'], function(index) {
     index.buycar();
     index.overflowList();
     index.slider_3();
+    index.tab_head();
+    index.slider_4();
 })
