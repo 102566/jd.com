@@ -20,10 +20,14 @@ define(['jquery', 'cookie'], function($, cookie) {
                     <div id="spec-n1" class="jqzoom main-img" data-big="1" clstag="shangpin|keycount|product|mainpic_fz">
                         <ul class="preview-btn J-preview-btn">
                         </ul>
-                        <img id="spec-img" width="350" data-origin="../img/xq1.jpg" alt="${res.title}" src="${baseUrl}/src/${pic[1].src}" jqimg="//img14.360buyimg.com//n0/jfs/t1/64026/17/7986/328492/5d5e3dc0E64ebde31/6800575673ac231d.jpg">
+                        <img id="spec-img" width="350" alt="${res.title}" src="${baseUrl}/src/${pic[1].src}" >
                         <i></i>
                         <div id="belt"></div>
+                        <div class="jqZoomPup" style="width: 236.25px;height: 236.25px;top:25px;left: 62.5px;z-index:-1;">&nbsp</div>
                     </div>
+
+                    <div class="zoomdiv" style="width: 540px; height: 540px; display: none;"><img class="bigimg" style="position:absolute;"src="${baseUrl}/src/${pic[10].src}"></div>
+
                     <div class="spec-list" clstag="shangpin|keycount|product|lunbotu_2">
                         <a id="spec-forward" href="javascript:;" class="arrow-prev disabled"><i class="sprite-arrow-prev"></i></a>
                         <a id="spec-backward" href="javascript:;" class="arrow-next disabled"><i class="sprite-arrow-next"></i></a>
@@ -630,8 +634,56 @@ define(['jquery', 'cookie'], function($, cookie) {
                     shop.push(product);
                 }
                 cookie.set('shop', JSON.stringify(shop), 1);
-                return false;
+                $('.cw-icon .ci-count').html(shop.length);
             })
+
+            $('.product-intro').on('mousemove', '.main-img', function(evt) {
+                let bigX = evt.pageX - $('.main-img').offset().left;
+                let bigY = evt.pageY - $('.main-img').offset().top;
+                let boxX = bigX - 118;
+                let boxY = bigY - 118;
+                if (boxX < 0) {
+                    boxX = 0;
+                }
+                if (boxX > 113.75) {
+                    boxX = 113.75;
+                }
+                if (boxY < 0) {
+                    boxY = 0;
+                }
+                if (boxY > 113.75) {
+                    boxY = 113.75;
+                }
+                $('.jqZoomPup').css({
+                    left: boxX,
+                    top: boxY
+                });
+                $('.zoomdiv>.bigimg').css({
+                    left: -boxX * 2.5,
+                    top: -boxY * 2.5
+                })
+            })
+            $('.product-intro').on('mouseover', '.main-img', function() {
+                $('.zoomdiv').css({
+                    display: 'block',
+                })
+                $('.jqZoomPup').css({
+                    'z-index': 1
+                });
+            })
+            $('.product-intro').on('mouseout', '.main-img', function() {
+                $('.zoomdiv').css({
+                    display: 'none',
+                })
+                $('.jqZoomPup').css({
+                    'z-index': -1
+                });
+            })
+        },
+        buycar: function() {
+            let shop = cookie.get('shop');
+            shop = JSON.parse(shop);
+            $('.cw-icon .ci-count').html(shop.length);
         }
     }
 })

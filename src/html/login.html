@@ -7,6 +7,7 @@
     <title>京东登录</title>
     <link rel="stylesheet" href="../style/logincss/login.min.css">
     <link rel="stylesheet" href="../style/logincss/login1.min.css">
+    <script src="../../node_modules/requirejs/require.js" data-main="../js/login.main"></script>
 </head>
 
 <body>
@@ -65,13 +66,13 @@
                                     <input type="hidden" name="useSlideAuthCode" id="useSlideAuthCode" value="1" class="hide">
                                     <div class="item item-fore1">
                                         <label for="loginname" class="login-label name-label"></label>
-                                        <input id="loginname" type="text" class="itxt" name="loginname" tabindex="1" _input="true" autocomplete="off" value="" placeholder="邮箱/用户名/登录手机">
+                                        <input id="loginname" type="text" class="itxt" name="loginname" value="" placeholder="邮箱/用户名/登录手机">
                                         <span class="clear-btn"></span>
                                     </div>
 
                                     <div id="entry" class="item item-fore2" style="visibility: visible;">
                                         <label class="login-label pwd-label" for="nloginpwd"></label>
-                                        <input type="password" id="nloginpwd" name="nloginpwd" class="itxt itxt-error" tabindex="2" autocomplete="off" _input="true" placeholder="密码">
+                                        <input type="password" id="nloginpwd" name="nloginpwd" class="itxt itxt-error" placeholder="密码">
                                         <span class="clear-btn"></span>
                                         <span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
                                     </div>
@@ -94,7 +95,7 @@
 
                                     <div class="item item-fore5">
                                         <div class="login-btn">
-                                            <a href="javascript:;" class="btn-img btn-entry" id="loginsubmit" tabindex="6" _submit="true" clstag="pageclick|keycount|login_pc_201804112|12">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                            <div class="btn-img btn-entry" id="loginsubmit" tabindex="6">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
                                         </div>
                                     </div>
                                 </form>

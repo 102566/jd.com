@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style/setup/setup.min.css">
     <link rel="stylesheet" href="../style/setup/setup1.min.css">
     <link rel="stylesheet" href="../style/setup/setup2.min.css">
+    <script src="../../node_modules/requirejs/require.js" data-main="../js/setup.main"></script>
 </head>
 
 <body>
@@ -79,7 +80,6 @@
                             <div class="form-item form-item-phone">
                                 <label class="select-country" id="select-country" country_id="0086" style="border-top: 1px solid rgb(221, 221, 221); border-right: none rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-left: 1px solid rgb(221, 221, 221); border-image: initial;">中国 0086<a href="javascript:void(0) " class="arrow"></a></label>
                                 <div class="item-input-wrap" style="border: 1px solid rgb(221, 221, 221);">
-                                    <txt style="position: absolute; z-index: 2; line-height: 46px; margin-left: 20px;font-size: 14px; font-family: Arial; color: rgb(204, 204, 204); display: inline;">建议使用常用手机号</txt><input type="text" id="form-phone" maxlength="11" name="phone" class="field" placeholder=" " autocomplete="off" default="<i class='i-def'></i>验证完成后，你可以使用该手机登录或找回密码">
                                     <i class="i-status"></i>
                                     <i class="i-cancel" style="display: none;"></i>
                                 </div>
@@ -115,81 +115,34 @@
                         <div id="step1-next" class="btn-register" clstag="pageclick|keycount|reg_puser_201804031|3">下一步</div>
                     </div>
                     <div id="step2-wrap">
-                        <div class="form-item form-item-account" id="form-item-account">
+                        <div class="form-item form-item-account" style="margin-bottom: 10px;" id="form-item-account">
                             <label>用　户　名</label>
-                            <input type="text" id="form-account" _input="true" name="regName" class="field" autocomplete="off" maxlength="20" placeholder="您的账户名和登录名" default="<i class='i-def'></i>支持中文、英文、数字、“-”、“_”的组合，4-20个字符">
-                            <i class="i-status"></i>
-                            <i class="i-cancel"></i>
+                            <input type="text" id="form-account" class="field" maxlength="20" style="background-color:white;" placeholder="您的账户名和登录名" default="<i class='i-def'></i>支持中文、英文、数字、“-”、“_”的组合，4-20个字符">
+                            <span style="font-size: 10px;"></span>
                         </div>
-                        <div class="input-tip">
-                            <span></span>
-                        </div>
-                        <div class="form-item">
+                        <div class="form-item" style="margin-bottom: 10px;">
                             <label>设 置 密 码</label>
-                            <input autocomplete="off" type="password" name="pwd" id="form-pwd" _input="true" class="field" maxlength="20" placeholder="建议使用两种或两种以上字符组合" default="<i class='i-def'></i>建议使用字母、数字和符号两种及以上的组合，8-20个字符">
-                            <i class="i-status"></i>
-                            <i class="i-cancel"></i>
-                            <div class="capslock-tip tips">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div>
+                            <input type="password" id="form-pwd" style="background-color:white;" class="field" maxlength="20" placeholder="建议使用两种或两种以上字符组合" default="<i class='i-def'></i>建议使用字母、数字和符号两种及以上的组合，8-20个字符">
+                            <span style="font-size:10px"></span>
                         </div>
-                        <div class="input-tip">
-                            <span></span>
-                        </div>
-                        <div class="form-item">
+                        <div class="form-item" style="margin-bottom: 10px;">
                             <label>确 认 密 码</label>
                             <input type="password" name="pwdRepeat" id="form-equalTopwd" _input="true" class="field" placeholder="请再次输入密码" default="<i class='i-def'></i>请再次输入密码">
-                            <i class="i-status"></i>
-                            <i class="i-cancel"></i>
-                            <div class="capslock-tip tips">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div>
+                            <span style="font-size:10px"></span>
                         </div>
-                        <div class="input-tip">
-                            <span></span>
+                        <div class="form-item" style="margin-bottom: 10px;">
+                            <label>手机号</label>
+                            <input type="text" name="email" id="form-phone" class="field" style="background-color:white;" maxlength="11" placeholder="请输入手机号" default="<i class='i-def'></i>验证完成后，你可以使用该手机登录">
+                            <span style="font-size:10px"></span>
                         </div>
-                        <!-- 默认是none -->
-                        <div class="item-email-wrap" style="display: none;">
-                            <div class="form-item">
-                                <label>邮 箱 验 证</label>
-                                <input type="text" name="email" id="form-email" class="field" autocomplete="off" maxlength="50" placeholder="请输入邮箱" default="<i class='i-def'></i>验证完成后，你可以使用该邮箱登录">
-                                <i class="i-status"></i>
-                                <ul class="suggest-container email-suggest">
-                                    <li class="">
-                                        <div class="value">@qq.com</div>
-                                    </li>
-                                    <li class="">
-                                        <div class="value">@163.com</div>
-                                    </li>
-                                    <li class="">
-                                        <div class="value">@126.com</div>
-                                    </li>
-                                    <li class="">
-                                        <div class="value">@Gmail.com</div>
-                                    </li>
-                                    <li class="">
-                                        <div class="value">@Sohu.com</div>
-                                    </li>
-                                    <li class="suggest-li-last ">
-                                        <div class="value">@Sina.com</div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="input-tip">
-                                <span></span>
-                            </div>
+                        <div class="form-item" style="margin-bottom: 10px;">
+                            <label>性别</label>
+                            <input type="text" id="form-sex" class="field" style="background-color:white;" maxlength="1">
+                            <span style="font-size:10px"></span>
                         </div>
-                        <div class="item-mailcode-wrap">
-                            <div class="form-item form-item-mailcode">
-                                <div class="mailcode-left">
-                                    <label>邮箱验证码</label>
-                                    <input type="text" name="mailCode" maxlength="6" autocomplete="off" id="mailCode" class="field mailcode" placeholder="请输入邮箱验证码">
-                                    <i class="i-status"></i>
-                                    <i class="i-cancel"></i>
-                                </div>
-                                <button id="getMailCode" class="btn-mailcode" type="button" clstag="pageclick|keycount|reg_puser_201804031|16">获取验证码</button>
-                                <div class="input-tip">
-                                    <span></span>
-                                </div>
-                            </div>
+                        <div>
+                            <div class="btn-register" id="form-register">立即注册</div>
                         </div>
-                        <div><button class="btn-register" id="form-register" _submit="true" clstag="pageclick|keycount|reg_puser_201804031|18">立即注册</button></div>
                         <div class="input-tip">
                             <span></span>
                         </div>

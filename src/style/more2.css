@@ -249,3 +249,8 @@
   background-position: 50%;
   cursor: pointer;
 }
+
+.nice-goods__recommends--scroll .scroll-bar {
+  opacity: 1;
+  visibility: visible;
+}

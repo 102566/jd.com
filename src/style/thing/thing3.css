@@ -996,8 +996,6 @@ a:hover .pop-score-detail .score-info .score-desc .score-desc {
 }
 
 .preview .jqZoomPup {
-  z-index: 3;
-  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -1006,9 +1004,6 @@ a:hover .pop-score-detail .score-info .score-desc .score-desc {
   border: 1px solid #aaa;
   background: 50% top no-repeat #fede4f;
   opacity: .5;
-  -moz-opacity: .5;
-  -khtml-opacity: .5;
-  filter: alpha(Opacity=50);
   cursor: move;
 }
 
