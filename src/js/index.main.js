@@ -17,4 +17,6 @@ require(['index'], function(index) {
     index.tab_head();
     index.slider_4();
     index.seckill();
+    // index.search();
+    index.localsearch();
 })

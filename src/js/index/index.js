@@ -18,12 +18,6 @@ define(['jquery', 'cookie'], function($, cookie) {
                 $('#J_popCtn').css("display", "none");
                 $('#cate_item' + (_index + 1)).css("display", "none");
             })
-            $('#key').on('focus', function() {
-                $('#shelper').css('display', 'block');
-            })
-            $('#key').on('blur', function() {
-                $('#shelper').css('display', 'none');
-            })
         },
         render: function() {
             $.ajax({
@@ -404,6 +398,92 @@ define(['jquery', 'cookie'], function($, cookie) {
                 $($('.timmer__unit')[2]).html(newsecond);
             }
             setInterval(getTimer, 1000);
+        },
+        search: function() {
+            $('.text').on('input', function() {
+                $.ajax({
+                    type: "get",
+                    url: `https://dd-search.jd.com/?terminal=pc&newjson=1&ver=2&zip=1&key=${this.value}&pvid=4b5c107c56374c78b92a1da7bf43c8d7&t=1593757909618&curr_url=www.jd.com%2F&callback=callback`,
+                    dataType: "jsonp",
+                    jsonpCallback: 'callback',
+                    success: function(res) {
+                        console.log(res);
+                        let str = ''
+                        res.forEach((elm, index) => {
+                            if (index == res.length - 1) {
+                                null;
+                            } else {
+                                str += `<li id="d_0" suggest-pos="1.his.0" title="${elm.key}" onclick="$o.clickItem(this)" history="1">
+                            <div class="search-item" style="color:#005AA0">${elm.key}</div>
+                            <div class="search-count">搜索历史</div>
+                             </li>`;
+                            }
+                        })
+                        str += `<li class="close" onclick="$o.del(event)">全部删除</li>`;
+                        $('#shelper').html(str);
+                    }
+                });
+            });
+        },
+        localsearch: function() {
+            $('.text').on('input', function() {
+                // $('#key').on('focus', function() {
+                $('#shelper').css('display', 'block');
+                // })
+                $.ajax({
+                    type: "get",
+                    url: `${baseUrl}/interface/search.php`,
+                    data: {
+                        inf: this.value
+                    },
+                    dataType: "json",
+                    success: function(res) {
+                        if (res.data != '没有数据') {
+                            let str = ''
+                            res.forEach((elm, index) => {
+                                str += `<li class="qsx" id="${elm.id}" title="${elm.title}" history="1">
+                            <div class="search-item" style="color:#005AA0">${elm.title}</div>
+                            <div class="search-count">搜索历史</div>
+                            </li>`;
+                            })
+                            str += `<li class="close" onclick="$o.del(event)">全部删除</li>`;
+                            $('#shelper').html(str);
+
+                        }
+                    }
+                });
+            })
+            $('#key').on('blur', function() {
+                setTimeout(fade, 1000);
+            })
+
+            $('.form').on('click', '.qsx', function() {
+                console.log(1);
+                location.href = `${baseUrl}/src/html/thing.html?id=${this.id}`;
+            })
+            $('.button').on('click', function() {
+                $.ajax({
+                    type: "get",
+                    url: `${baseUrl}/interface/search.php`,
+                    data: {
+                        inf: $('.text').val()
+                    },
+                    dataType: "json",
+                    success: function(res) {
+                        if (res.data != '没有数据') {
+                            res.forEach(elm => {
+                                location.href = `${baseUrl}/src/html/thing.html?id=${elm.id};`
+                            })
+                        } else {
+                            $('.text').val('没有数据');
+                        }
+                    }
+                });
+            })
+
+            function fade() {
+                $('#shelper').css('display', 'none');
+            }
         }
     }
 });

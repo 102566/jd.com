@@ -682,8 +682,10 @@ define(['jquery', 'cookie'], function($, cookie) {
         },
         buycar: function() {
             let shop = cookie.get('shop');
-            shop = JSON.parse(shop);
-            $('.cw-icon .ci-count').html(shop.length);
+            if (shop) {
+                shop = JSON.parse(shop);
+                $('.cw-icon .ci-count').html(shop.length);
+            }
         }
     }
 })
