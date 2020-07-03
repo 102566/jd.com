@@ -8,4 +8,5 @@ require.config({
 require(['index'], function(index) {
     index.render();
     index.buycar();
+    index.localsearch();
 })
