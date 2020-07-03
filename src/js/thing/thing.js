@@ -20,24 +20,24 @@ define(['jquery', 'cookie'], function($, cookie) {
                     <div id="spec-n1" class="jqzoom main-img" data-big="1" clstag="shangpin|keycount|product|mainpic_fz">
                         <ul class="preview-btn J-preview-btn">
                         </ul>
-                        <img id="spec-img" width="350" alt="${res.title}" src="${baseUrl}/src/${pic[1].src}" >
+                        <img id="spec-img" width="350" alt="${res.title}" src="${baseUrl}/src/${pic[10].src}" >
                         <i></i>
                         <div id="belt"></div>
                         <div class="jqZoomPup" style="width: 236.25px;height: 236.25px;top:25px;left: 62.5px;z-index:-1;">&nbsp</div>
                     </div>
 
-                    <div class="zoomdiv" style="width: 540px; height: 540px; display: none;"><img class="bigimg" style="position:absolute;"src="${baseUrl}/src/${pic[10].src}"></div>
+                    <div class="zoomdiv" style="width: 540px; height: 540px; display: none;"><img class="bigimg" style="position:absolute;"src="${baseUrl}/src/${pic[15].src}"></div>
 
                     <div class="spec-list" clstag="shangpin|keycount|product|lunbotu_2">
                         <a id="spec-forward" href="javascript:;" class="arrow-prev disabled"><i class="sprite-arrow-prev"></i></a>
                         <a id="spec-backward" href="javascript:;" class="arrow-next disabled"><i class="sprite-arrow-next"></i></a>
                         <div id="spec-list" class="spec-items">
                             <ul class="lh">
-                                <li class="img-hover"><img alt="${res.title}" src="${baseUrl}/src/${pic[2].src}" data-url="jfs/t1/64026/17/7986/328492/5d5e3dc0E64ebde31/6800575673ac231d.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[3].src}" data-url="jfs/t1/44077/4/12606/218122/5d5e3dbeE4cf95582/d7639da1f3ecaffa.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[4].src}" data-url="jfs/t1/67890/10/2969/74960/5d135f69E0cdb42e8/d088cb84d7d28b27.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[5].src}" data-url="jfs/t1/78324/4/7908/87876/5d5e3dbdEb1c3ba48/2559ea3a77ac4d97.jpg" data-img="1" width="50" height="50"></li>
-                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[6].src}" data-url="jfs/t1/42767/31/12827/172126/5d5e3dbeEbd334550/9a6271846393f9fa.jpg" data-img="1" width="50" height="50"></li>
+                                <li class="img-hover"><img alt="${res.title}" src="${baseUrl}/src/${pic[2].src}" data-url="${baseUrl}/src/${pic[10].src}" id = "${baseUrl}/src/${pic[15].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[3].src}" data-url="${baseUrl}/src/${pic[11].src}" id = "${baseUrl}/src/${pic[16].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[4].src}" data-url="${baseUrl}/src/${pic[12].src}" id = "${baseUrl}/src/${pic[17].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[5].src}" data-url="${baseUrl}/src/${pic[13].src}" id = "${baseUrl}/src/${pic[18].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[6].src}" data-url="${baseUrl}/src/${pic[14].src}" id = "${baseUrl}/src/${pic[19].src}" data-img="1" width="50" height="50"></li>
                             </ul>
                         </div>
                     </div>
@@ -679,6 +679,15 @@ define(['jquery', 'cookie'], function($, cookie) {
                     'z-index': -1
                 });
             })
+
+            $('.product-intro').on('mouseover', '#spec-list img', function() {
+                $(this).parent().siblings().removeClass('img-hover');
+                $(this).parent().addClass('img-hover');
+                let _src = $(this).attr('data-url');
+                let __src = $(this).attr('id');
+                $(this).parents('.spec-list').siblings('#spec-n1').children('img').attr('src', _src);
+                $(this).parents('.spec-list').siblings('.zoomdiv').children('img').attr('src', __src);
+            })
         },
         buycar: function() {
             let shop = cookie.get('shop');
@@ -746,6 +755,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             function fade() {
                 $('#shelper').css('display', 'none');
             }
-        }
+        },
+
     }
 })

@@ -113,3 +113,159 @@ input[type="hidden"] {
     -webkit-box-shadow: 0 0 5px #ddd;
     box-shadow: 0 0 5px #ddd;
 }
+
+.cart-search .form {
+    position: relative;
+    z-index: 999;
+}
+
+#shelper li.brand-search .bs-item .name {
+    width: 340px
+}
+
+#shelper {
+    width: 349px;
+}
+
+#shelper {
+    overflow: hidden;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 382px;
+    border: 1px solid #CCC;
+    background: #fff;
+    z-index: 999;
+}
+
+#shelper li {
+    overflow: hidden;
+    padding: 1px 5px;
+    line-height: 22px;
+    cursor: pointer
+}
+
+#shelper .search-item {
+    float: left;
+    width: 250px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+#shelper li.fore1 .search-item {
+    width: 250px
+}
+
+#shelper .search-count {
+    overflow: hidden;
+    color: #aaa;
+    text-align: right;
+    *zoom: 1
+}
+
+#shelper .close {
+    border-top: 1px solid #efefef;
+    text-align: right
+}
+
+#shelper .item3 {
+    cursor: default
+}
+
+#shelper .item3 a {
+    float: left;
+    margin-right: 10px;
+    white-space: nowrap
+}
+
+#shelper li.fore1 {
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #ddd
+}
+
+#shelper li.fore1 .item1 {
+    height: 22px;
+    overflow: hidden;
+    zoom: 1
+}
+
+#shelper li.fore1 div.fore1 {
+    padding: 0 5px
+}
+
+#shelper li.fore1 strong {
+    color: #C00
+}
+
+#shelper li.fore1 .fore1 strong {
+    color: #333
+}
+
+#shelper li.fore1 .item1,
+#shelper li.fore1 .item2 {
+    float: none;
+    width: auto;
+    padding: 1px 5px
+}
+
+#shelper li.fore1 .item3 {
+    float: none;
+    width: auto;
+    color: #9C9A9C
+}
+
+#shelper li.fore1 span {
+    float: left
+}
+
+#shelper li.close:hover,
+#shelper li.fore1:hover {
+    background: 0 0
+}
+
+#shelper li.fore1 div:hover {
+    background: #f5f5f5!important
+}
+
+#shelper .dropdown-simg {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top
+}
+
+#shelper li.brand-search {
+    border-bottom: 1px solid #ddd;
+    font-family: Microsoft YaHei
+}
+
+#shelper li.brand-search .info {
+    color: #e4393c;
+    margin-bottom: 2px
+}
+
+#shelper li.brand-search .bs-item {
+    margin-bottom: 7px
+}
+
+#shelper li.brand-search .bs-item .logo {
+    width: 90px
+}
+
+#shelper li.brand-search .bs-item .logo,
+#shelper li.brand-search .bs-item .name {
+    display: inline-block;
+    height: 30px;
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden
+}
+
+#shelper li.brand-search .bs-item .name {
+    line-height: 30px;
+    margin-left: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 265px
+}

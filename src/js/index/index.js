@@ -26,8 +26,10 @@ define(['jquery', 'cookie'], function($, cookie) {
                 dataType: "json",
                 success: function(res) {
                     var str = ''
+                    console.log(res);
                     res.forEach(element => {
                         let data = JSON.parse(element.pic);
+
                         // console.log(data.pic);
                         str += `
                         <li class="more2_item more2_item_good hover-on ">

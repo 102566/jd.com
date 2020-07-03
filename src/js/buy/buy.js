@@ -9,7 +9,6 @@ define(['jquery', 'cookie'], function($, cookie) {
 
                 shop = JSON.parse(shop);
 
-                console.log(shop);
                 let idlist = shop.map(elm => elm.id).join();
                 $('.number').html(shop.length);
                 $('.amount-sum>em').html(shop.length);
@@ -301,6 +300,66 @@ define(['jquery', 'cookie'], function($, cookie) {
                         location.reload();
                     }
                 })
+            }
+        },
+        localsearch: function() {
+            $('.itxt').on('input', function() {
+                // $('#key').on('focus', function() {
+                $('#shelper').css('display', 'block');
+                // })
+                $.ajax({
+                    type: "get",
+                    url: `${baseUrl}/interface/search.php`,
+                    data: {
+                        inf: this.value
+                    },
+                    dataType: "json",
+                    success: function(res) {
+                        if (res.data != '没有数据') {
+                            let str = ''
+                            res.forEach((elm, index) => {
+                                str += `<li class="qsx" id="${elm.id}" title="${elm.title}" history="1">
+                            <div class="search-item" style="color:#005AA0">${elm.title}</div>
+                            <div class="search-count">搜索历史</div>
+                            </li>`;
+                            })
+                            str += `<li class="close" onclick="$o.del(event)">全部删除</li>`;
+                            $('#shelper').html(str);
+
+                        }
+                    }
+                });
+            })
+            $('#key').on('blur', function() {
+                setTimeout(fade, 1000);
+            })
+
+            $('#shelper').on('click', '.qsx', function() {
+                console.log(1);
+                location.href = `${baseUrl}/src/html/thing.html?id=${this.id}`;
+            })
+            $('.button').on('click', function() {
+                $.ajax({
+                    type: "get",
+                    url: `${baseUrl}/interface/search.php`,
+                    data: {
+                        inf: $('.itxt').val()
+                    },
+                    dataType: "json",
+                    success: function(res) {
+                        if (res.data != '没有数据') {
+                            res.forEach(elm => {
+                                location.href = `${baseUrl}/src/html/thing.html?id=${elm.id};`
+                            })
+                        } else {
+                            $('.itxt').val('没有数据');
+                        }
+                    }
+                });
+            })
+
+            function fade() {
+                $('#shelper').css('display', 'none');
             }
         }
     }
