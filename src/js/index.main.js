@@ -16,4 +16,5 @@ require(['index'], function(index) {
     index.slider_3();
     index.tab_head();
     index.slider_4();
+    index.seckill();
 })

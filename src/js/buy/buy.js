@@ -38,7 +38,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 <div class="cell p-checkbox">
                                     <div class="cart-checkbox">
                                         <!--单品-->
-                                        <input p-type="46318765895_1" type="checkbox" name="checkItem" value="46318765895_1" checked="checked" data-bind="cbid" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_sku">
+                                        <input p-type="46318765895_1" type="checkbox" name="checkItem" value="46318765895_1" checked="checked" class="jdcheckbox" id="asdfgh${elm.id}">
                                         <label for="" class="checked">勾选商品</label>
                                         <span class="line-circle"></span>
                                     </div>
@@ -110,7 +110,6 @@ define(['jquery', 'cookie'], function($, cookie) {
                     }
                 });
                 $('.item-list').on('click', '.jdcheckbox', function() {
-                    console.log(this.checked);
                     if (this.checked) {
                         let all = (+$('.sumPrice>em').html());
                         let sum = (+$(this).parents('.item-form').children('.p-sum').children('strong').text().slice(1));
@@ -259,6 +258,48 @@ define(['jquery', 'cookie'], function($, cookie) {
                         res += (+elm.innerHTML.slice(1))
                     })
                     $('.sumPrice>em').html(res);
+                })
+
+                $('#cart-floatbar .jdcheckbox').on('click', function() {
+                    let res = 0;
+                    if (this.checked) {
+                        Array.from($('.jdcheckbox')).forEach(elm => {
+                            elm.checked = this.checked;
+                        })
+                        Array.from($('.p-sum>strong')).forEach(elm => {
+                            res += (+elm.innerHTML.slice(1))
+                        })
+                        $('.sumPrice>em').html(res);
+                        $('.amount-sum>em').html(shop.length);
+                    }
+                })
+
+                $('#cart-floatbar .remove-batch').on('click', function() {
+                    let arr = [];
+                    let flag = confirm('确定删除吗');
+                    if (flag) {
+                        Array.from($('.jdcheckbox')).forEach(elm => {
+                            if (elm.checked) {
+                                let id = elm.id.replace(/asdfgh/, '');
+                                arr.push(id);
+                            }
+                        })
+                        let arr1 = arr.splice(1, 4);
+                        let _shop = [];
+                        shop.forEach(elm => {
+                            let j = 0;
+                            arr1.forEach(value => {
+                                if (value == elm.id) {
+                                    j++;
+                                }
+                            })
+                            if (j == 0) {
+                                _shop.push(elm);
+                            }
+                        })
+                        cookie.set('shop', JSON.stringify(_shop), 1);
+                        location.reload();
+                    }
                 })
             }
         }

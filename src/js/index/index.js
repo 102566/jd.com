@@ -329,7 +329,6 @@ define(['jquery', 'cookie'], function($, cookie) {
             let timer;
             $($('.seckill-brand .slider_indicators_btn')[0]).on('click', prev)
             $($('.seckill-brand .slider_indicators_btn')[1]).on('click', next)
-            console.log($('.seckill-brand .slider_list'));
             $('.seckill-brand').hover(stop, start);
 
             function prev() {
@@ -371,6 +370,40 @@ define(['jquery', 'cookie'], function($, cookie) {
             }
 
             start();
+        },
+        seckill: function() {
+            getTimer();
+
+            function getTimer() {
+                let now = new Date(),
+                    year = now.getFullYear(),
+                    months = now.getMonth(),
+                    day = now.getDate(),
+                    hour = now.getHours();
+                let aim;
+                if (hour >= 14) {
+                    aim = new Date(year, months, day + 1, 14, 0, 0);
+                } else {
+                    aim = new Date(year, months, day, 14, 0, 0);
+                }
+                let num = aim.getTime() - now.getTime(),
+                    newhour = parseInt(num / (1000 * 60 * 60)),
+                    newminutes = parseInt(num % (1000 * 60 * 60) / (1000 * 60)),
+                    newsecond = parseInt(num % (1000 * 60 * 60) % (1000 * 60) / 1000);
+                if (newhour < 10) {
+                    newhour = '0' + newhour;
+                }
+                if (newminutes < 10) {
+                    newminutes = '0' + newminutes;
+                }
+                if (newsecond < 10) {
+                    newsecond = '0' + newsecond;
+                }
+                $($('.timmer__unit')[0]).html(newhour);
+                $($('.timmer__unit')[1]).html(newminutes);
+                $($('.timmer__unit')[2]).html(newsecond);
+            }
+            setInterval(getTimer, 1000);
         }
     }
 });
