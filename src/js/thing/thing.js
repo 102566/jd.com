@@ -7,6 +7,9 @@ define(['jquery', 'cookie'], function($, cookie) {
         render: function() {
             let id = location.search.split('=')[1];
             let num1;
+            let step = 290;
+            let flag = true;
+            let addnum = parseInt($('.buy-num').val());
             $.ajax({
                 type: "get",
                 url: `${baseUrl}/interface/thing.php?id=${id}`,
@@ -597,7 +600,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                     $('.product-intro').html(str);
                 }
             });
-            let addnum = parseInt($('.buy-num').val());
+
             $('.product-intro').on('click', '.btn-add', function() {
                 if (addnum < num1) {
                     addnum++;
@@ -620,6 +623,9 @@ define(['jquery', 'cookie'], function($, cookie) {
 
 
             $('.product-intro').on('click', '.btn-lg', function() {
+                $(this).css('position', 'relative');
+                let aimX = $('#shopping-amount').offset().left;
+                let aimY = $('#shopping-amount').offset().top;
                 let shop = cookie.get('shop');
                 let product = {
                     id: id,
@@ -639,7 +645,62 @@ define(['jquery', 'cookie'], function($, cookie) {
                     shop.push(product);
                 }
                 cookie.set('shop', JSON.stringify(shop), 1);
-                $('.cw-icon .ci-count').html(shop.length);
+
+                let _fly = document.createElement('i');
+                $(_fly).addClass('ci-count');
+                $(this).append($(_fly));
+                $(_fly).css({
+                    'position': 'absolute',
+                    'left': '0px',
+                    'top': '0px',
+                    'width': '50px',
+                    'height': '50px',
+                    'backgroundColor': '#c81623',
+                    'border-radius': '7px 7px 7px 0',
+                    'fontSize': '5px',
+                    'zIndex': 999,
+                });
+                let oldX = $(_fly).offset().left;
+                let oldY = $(_fly).offset().top;
+                aimX = aimX - oldX;
+                aimY = aimY - oldY;
+                let nowX = 0;
+                let nowY = 0;
+                let smallStep = 1.634;
+                let _initSize = 120;
+                let timer = setInterval(function() {
+                    _initSize -= 0.6;
+                    smallStep -= 0.02;
+                    nowX += 4;
+                    nowY -= (4 + smallStep);
+                    if (nowY <= aimY && nowX >= aimX) {
+                        $(_fly).remove('i');
+                        $('.cw-icon .ci-count').html(shop.length);
+                        clearInterval(timer);
+                    }
+                    if (nowX > aimX) {
+                        nowX -= 4;
+                    }
+                    if (nowY < aimY) {
+                        nowY += (4 + smallStep);
+                    }
+                    console.log($('#spec-img').attr('src'));
+                    $(_fly).css({
+                        'position': 'absolute',
+                        'left': nowX,
+                        'top': nowY - 20,
+                        'width': _initSize,
+                        'height': _initSize,
+                        'backgroundColor': '#c81623',
+                        'background-image': 'url(' + $('.img-hover img').attr('src') + ')',
+                        'background-size': '100%',
+                        'background-repeat': 'no-repeat',
+                        'background-position': 'center',
+                        'border-radius': '50%',
+                        'fontSize': '5px',
+                        'zIndex': 999,
+                    });
+                }, 1)
             })
 
             $('.product-intro').on('mousemove', '.main-img', function(evt) {
@@ -692,15 +753,12 @@ define(['jquery', 'cookie'], function($, cookie) {
                 $(this).parents('.spec-list').siblings('#spec-n1').children('img').attr('src', _src);
                 $(this).parents('.spec-list').siblings('.zoomdiv').children('img').attr('src', __src);
             })
-            let step = 290;
-            let flag = true;
+
             $('.product-intro').on('click', '.sprite-arrow-next', function() {
                 $(this).parent().addClass('disabled');
                 $(this).parent().siblings().removeClass('disabled');
                 if (flag) {
                     flag = !flag;
-                    console.log(flag);
-                    console.log($('#spec-list .lh'));
                     let left = parseInt($('#spec-list .lh').css('left'));
                     left -= step;
                     $('#spec-list .lh').animate({
@@ -790,6 +848,5 @@ define(['jquery', 'cookie'], function($, cookie) {
                 $('#shelper').css('display', 'none');
             }
         },
-
     }
 })
