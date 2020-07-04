@@ -361,6 +361,18 @@ define(['jquery', 'cookie'], function($, cookie) {
             function fade() {
                 $('#shelper').css('display', 'none');
             }
+        },
+        buycar: function() {
+            let shop = cookie.get('shop');
+            let username = cookie.get('username');
+            if (shop) {
+                shop = JSON.parse(shop);
+                $('.cw-icon .ci-count').html(shop.length);
+            }
+            if (username) {
+                $('#ttbar-login .link-login').html('你好,' + username);
+                $('#ttbar-login .link-login').removeAttr('href');
+            }
         }
     }
 })

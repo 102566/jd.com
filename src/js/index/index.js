@@ -26,7 +26,6 @@ define(['jquery', 'cookie'], function($, cookie) {
                 dataType: "json",
                 success: function(res) {
                     var str = ''
-                    console.log(res);
                     res.forEach(element => {
                         let data = JSON.parse(element.pic);
 
@@ -74,15 +73,24 @@ define(['jquery', 'cookie'], function($, cookie) {
             let timer;
             $('.sliderBannerWrapper .slider_control_prev').on('click', prev);
             $('.sliderBannerWrapper .slider_control_next').on('click', next);
+
             $('.sliderBannerWrapper').hover(function() {
                 stop();
             }, function() {
                 main();
             })
+            $('.focus__main .slider_indicators_btn').on('click', function() {
+                _index = $('.focus__main .slider_indicators_btn').index(this);
+                first_x = _index * -step,
+                    $('.sliderBannerWrapper .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').animate({
+                        left: first_x
+                    }, 400);
+                $(this).addClass('slider_indicators_btn_active');
+                $(this).siblings().removeClass('slider_indicators_btn_active');
+            })
 
 
             function prev() {
-
                 if (first_x == -4720) {
                     _index = 0;
                     $('.sliderBannerWrapper .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
@@ -345,7 +353,6 @@ define(['jquery', 'cookie'], function($, cookie) {
             function next() {
                 flag != flag;
                 if (left == -180) {
-                    index = 1;
                     left = -540;
                     $('.seckill-brand .slider_wrapper').css('left', left);
                 }

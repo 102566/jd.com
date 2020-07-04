@@ -3370,3 +3370,40 @@ div.jdpano-tooltip:hover span:after {
     background: url(../../img/ct111.png) no-repeat 3px 5px;
     overflow: hidden;
 }
+
+#settleup-content .smb {
+    padding: 8px;
+    background: #F5F5F5;
+    _height: 45px;
+    _padding-top: 15px;
+    _padding-bottom: 0;
+}
+
+.ar {
+    text-align: right;
+}
+
+#settleup-content .smb .p-total {
+    float: left;
+    line-height: 29px;
+}
+
+#settleup-content .smb a {
+    float: right;
+    height: 29px;
+    padding: 0 10px;
+    background: #E4393C;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 29px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+#settleup-content .smt {
+    height: 25px;
+    padding: 6px 8px;
+    line-height: 25px;
+}
