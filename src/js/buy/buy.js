@@ -45,16 +45,16 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 <div class="cell p-goods">
                                     <div class="goods-item">
                                         <div class="p-img">
-                                            <a href="//item.jd.com/46318765895.html" target="_blank" class="J_zyyhq_46318765895" pnc="false" pncs="">
-                                                <img alt="${elm.title}" clstag="clickcart|keycount|xincart|cart_sku_pic" src="${baseUrl}/src/${pic[0].src}">
+                                            <a href="${baseUrl}/src/html/thing.html?id=${elm.id}" target="_blank" class="J_zyyhq_46318765895" pnc="false" pncs="">
+                                                <img alt="${elm.title}"  style ="width:100%;height:100%" src="${baseUrl}/src/${pic[0].src}">
                                             </a>
                                         </div>
                                         <div class="item-msg">
                                             <div class="p-name">
-                                                <a clstag="clickcart|keycount|xincart|cart_sku_name" href="//item.jd.com/46318765895.html" target="_blank">${elm.title}</a>
+                                                <a clstag="clickcart|keycount|xincart|cart_sku_name" href="${baseUrl}/src/html/thing.html?id=${elm.id}" target="_blank">${elm.title}</a>
                                             </div>
                                             <div class="p-extend p-extend-new">
-                                                <span class="promise" _yanbao="yanbao_46318765895_" _service="service_46318765895_" isproduct="1"><i class="jd-service-icon"></i><a data-tips="选服务" class="ftx-03 jd-service" href="#none">选服务</a></span>
+                                                <span class="promise" ><i class="jd-service-icon"></i><a data-tips="选服务" class="ftx-03 jd-service" href="#none">选服务</a></span>
                                             </div>
                                         </div>
                                     </div>

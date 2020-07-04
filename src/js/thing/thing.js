@@ -9,7 +9,6 @@ define(['jquery', 'cookie'], function($, cookie) {
             let num1;
             let step = 290;
             let flag = true;
-            let addnum = parseInt($('.buy-num').val());
             $.ajax({
                 type: "get",
                 url: `${baseUrl}/interface/thing.php?id=${id}`,
@@ -604,6 +603,8 @@ define(['jquery', 'cookie'], function($, cookie) {
             });
 
             $('.product-intro').on('click', '.btn-add', function() {
+
+                let addnum = parseInt($('.buy-num').val());
                 if (addnum < num1) {
                     addnum++;
                 }
@@ -614,6 +615,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             })
 
             $('.product-intro').on('click', '.btn-reduce', function() {
+                let addnum = parseInt($('.buy-num').val());
                 if (addnum > 1) {
                     addnum--;
                 }
@@ -624,6 +626,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             });
 
             $('.product-intro').on('click', '.btn-lg', function() {
+                let addnum = parseInt($('.buy-num').val());
                 $(this).css('position', 'relative');
                 let aimX = $('#shopping-amount').offset().left;
                 let aimY = $('#shopping-amount').offset().top;
