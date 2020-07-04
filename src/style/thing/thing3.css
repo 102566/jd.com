@@ -1037,12 +1037,12 @@ a:hover .pop-score-detail .score-info .score-desc .score-desc {
 .preview .spec-list .arrow-prev .sprite-arrow-prev {
   width: 22px;
   height: 32px;
-  background-image: url(../../img/__sprite.png);
-  background-position: 0 -54px;
+  background-image: url(../../img/hover-prev.png);
+  background-position: 0 -64px;
 }
 
-.preview .spec-list .arrow-prev:hover i {
-  background: url(//static.360buyimg.com/item/unite/1.0.101/components/default/preview/i/hover-prev.png);
+.preview .spec-list .arrow-prev i {
+  background: url(../../img/hover-prev.png);
 }
 
 .preview .spec-list .arrow-prev.disabled i {
@@ -1056,12 +1056,12 @@ a:hover .pop-score-detail .score-info .score-desc .score-desc {
 .preview .spec-list .arrow-next .sprite-arrow-next {
   width: 22px;
   height: 32px;
-  background-image: url(../../img/__sprite.png);
-  background-position: -78px 0;
+  background-image: url(../../img/hover-next.png);
+  background-position: -88px 0;
 }
 
-.preview .spec-list .arrow-next:hover i {
-  background: url(//static.360buyimg.com/item/unite/1.0.101/components/default/preview/i/hover-next.png);
+.preview .spec-list .arrow-next i {
+  background: url(../../img/hover-next.png);
 }
 
 .preview .spec-list .arrow-next.disabled i {

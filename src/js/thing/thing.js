@@ -30,10 +30,15 @@ define(['jquery', 'cookie'], function($, cookie) {
 
                     <div class="spec-list" clstag="shangpin|keycount|product|lunbotu_2">
                         <a id="spec-forward" href="javascript:;" class="arrow-prev disabled"><i class="sprite-arrow-prev"></i></a>
-                        <a id="spec-backward" href="javascript:;" class="arrow-next disabled"><i class="sprite-arrow-next"></i></a>
+                        <a id="spec-backward" href="javascript:;" class="arrow-next "><i class="sprite-arrow-next"></i></a>
                         <div id="spec-list" class="spec-items">
-                            <ul class="lh">
+                            <ul class="lh" style="position:relative;left:0px;">
                                 <li class="img-hover"><img alt="${res.title}" src="${baseUrl}/src/${pic[2].src}" data-url="${baseUrl}/src/${pic[10].src}" id = "${baseUrl}/src/${pic[15].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[3].src}" data-url="${baseUrl}/src/${pic[11].src}" id = "${baseUrl}/src/${pic[16].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[4].src}" data-url="${baseUrl}/src/${pic[12].src}" id = "${baseUrl}/src/${pic[17].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[5].src}" data-url="${baseUrl}/src/${pic[13].src}" id = "${baseUrl}/src/${pic[18].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[6].src}" data-url="${baseUrl}/src/${pic[14].src}" id = "${baseUrl}/src/${pic[19].src}" data-img="1" width="50" height="50"></li>
+                                <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[2].src}" data-url="${baseUrl}/src/${pic[10].src}" id = "${baseUrl}/src/${pic[15].src}" data-img="1" width="50" height="50"></li>
                                 <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[3].src}" data-url="${baseUrl}/src/${pic[11].src}" id = "${baseUrl}/src/${pic[16].src}" data-img="1" width="50" height="50"></li>
                                 <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[4].src}" data-url="${baseUrl}/src/${pic[12].src}" id = "${baseUrl}/src/${pic[17].src}" data-img="1" width="50" height="50"></li>
                                 <li class=""><img alt="${res.title}" src="${baseUrl}/src/${pic[5].src}" data-url="${baseUrl}/src/${pic[13].src}" id = "${baseUrl}/src/${pic[18].src}" data-img="1" width="50" height="50"></li>
@@ -679,7 +684,6 @@ define(['jquery', 'cookie'], function($, cookie) {
                     'z-index': -1
                 });
             })
-
             $('.product-intro').on('mouseover', '#spec-list img', function() {
                 $(this).parent().siblings().removeClass('img-hover');
                 $(this).parent().addClass('img-hover');
@@ -687,6 +691,36 @@ define(['jquery', 'cookie'], function($, cookie) {
                 let __src = $(this).attr('id');
                 $(this).parents('.spec-list').siblings('#spec-n1').children('img').attr('src', _src);
                 $(this).parents('.spec-list').siblings('.zoomdiv').children('img').attr('src', __src);
+            })
+            let step = 290;
+            let flag = true;
+            $('.product-intro').on('click', '.sprite-arrow-next', function() {
+                $(this).parent().addClass('disabled');
+                $(this).parent().siblings().removeClass('disabled');
+                if (flag) {
+                    flag = !flag;
+                    console.log(flag);
+                    console.log($('#spec-list .lh'));
+                    let left = parseInt($('#spec-list .lh').css('left'));
+                    left -= step;
+                    $('#spec-list .lh').animate({
+                        left: left
+                    })
+                }
+
+            })
+            $('.product-intro').on('click', '.sprite-arrow-prev', function() {
+                $(this).parent().addClass('disabled');
+                $(this).parent().siblings().removeClass('disabled');
+                if (flag == false) {
+                    flag = !flag;
+                    let left = parseInt($('#spec-list .lh').css('left'));
+                    left += step;
+                    $('#spec-list .lh').animate({
+                        left: left
+                    })
+                }
+
             })
         },
         buycar: function() {
