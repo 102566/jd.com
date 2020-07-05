@@ -69,32 +69,45 @@ define(['jquery', 'md5'], function($, md5) {
                     $('#form-sex').siblings('span').css('color', 'red');
                 }
             })
+
             $('#form-register').on('click', function() {
                 let username = $('#form-account').val();
                 let password = $('#form-pwd').val();
                 password = $.md5(password);
                 let phone = $('#form-phone').val();
                 let sex = $('#form-sex').val();
-                $.ajax({
-                    type: "get",
-                    url: `${baseUrl}/interface/setup.php`,
-                    data: {
-                        username: username,
-                        password: password,
-                        phone: phone,
-                        sex: sex
-                    },
-                    dataType: "json",
-                    success: function(res) {
-                        if (res.has) {
-                            alert('注册成功');
-                            location.href = `${baseUrl}/src/html/login.html`;
-                        } else {
-                            alert('注册失败,请重新注册');
-                            location.reload();
-                        }
+                let arr = Array.from($('#step2-wrap span'));
+                console.log(arr);
+                let aimFlag = 0;
+                arr.forEach(elm => {
+                    if ($(elm).css('color') == 'rgb(0, 128, 0)') {
+                        aimFlag++;
                     }
-                });
+                })
+                if (aimFlag == 5) {
+                    $.ajax({
+                        type: "get",
+                        url: `${baseUrl}/interface/setup.php`,
+                        data: {
+                            username: username,
+                            password: password,
+                            phone: phone,
+                            sex: sex
+                        },
+                        dataType: "json",
+                        success: function(res) {
+                            if (res.has) {
+                                alert('注册成功');
+                                location.href = `${baseUrl}/src/html/login.html`;
+                            } else {
+                                alert('注册失败,请重新注册');
+                                location.reload();
+                            }
+                        }
+                    });
+                } else {
+                    alert('看看红色的字，我的哥');
+                }
             })
         }
     }
