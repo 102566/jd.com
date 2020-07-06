@@ -783,7 +783,6 @@ define(['jquery', 'cookie'], function($, cookie) {
                 }
 
             })
-
             $('.dorpdown-layer').on('mouseenter', function() {
                 let idlist = [];
                 let shop = cookie.get('shop');
@@ -820,7 +819,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                                     <li>
                                         <div class="p-img fl"><a href="${baseUrl}/src/html/thing.html?id=${elm.id}" target="_blank"><img src="${baseUrl}/src/${pic[0].src}" width="50" height="50" alt=""></a></div>
                                         <div class="p-name fl"><a href="${baseUrl}/src/html/thing.html?id=${elm.id}" title="${elm.title}" >${elm.title}</a></div>
-                                        <div class="p-detail fr ar"><span class="p-price"><strong>￥${elm.price}</strong>×${num}</span><br><a class="delete" data-id="${elm.id}" href="javascript:;">删除</a></div>
+                                        <div class="p-detail fr ar"><span class="p-price"><strong>￥${elm.price}</strong>×${num}</span><br><a class="delete" data-id="${elm.id}" href="javascript:;" style="z-index:999">删除</a></div>
                                     </li>
                                 </ul>
                                 `;
@@ -832,23 +831,24 @@ define(['jquery', 'cookie'], function($, cookie) {
                     $('.prompt').replaceWith('<div class="prompt"><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div></div>');
                     $('#settleup-content').replaceWith('<div class="prompt"><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div></div>');
                 }
-                $('.dorpdown-layer').on('click', '.delete', function() {
-                    $(this).parents('#mcart-sigle').remove();
-                    let shop = cookie.get('shop');
-                    if (shop) {
-                        shop = JSON.parse(shop);
-                    }
-                    let _id = $(this).attr('data-id');
-                    let _arr = []
-                    shop.forEach(elm => {
-                        if (elm.id != _id) {
-                            _arr.push(elm);
-                        };
-                    });
-                    $('.cw-icon .ci-count').html(_arr.length);
-                    $('.smb .p-total').html(`共<b>${_arr.length}</b>件商品`);
-                    cookie.set('shop', JSON.stringify(_arr), 1);
-                })
+            })
+            $('.dorpdown-layer').on('click', '.delete', function() {
+                console.log(1);
+                $(this).parents('#mcart-sigle').remove();
+                let shop = cookie.get('shop');
+                if (shop) {
+                    shop = JSON.parse(shop);
+                }
+                let _id = $(this).attr('data-id');
+                let _arr = []
+                shop.forEach(elm => {
+                    if (elm.id != _id) {
+                        _arr.push(elm);
+                    };
+                });
+                $('.cw-icon .ci-count').html(_arr.length);
+                $('.smb .p-total').html(`共<b>${_arr.length}</b>件商品`);
+                cookie.set('shop', JSON.stringify(_arr), 1);
             })
         },
         buycar: function() {

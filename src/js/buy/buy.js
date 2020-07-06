@@ -221,6 +221,9 @@ define(['jquery', 'cookie'], function($, cookie) {
                 })
 
                 $('.item-list').on('input', '.itxt', function() {
+                    let str = $(this).val();
+                    let str1 = str.replace(/\D/g, '');
+                    $(this).val(str1)
                     let num = (+$(this).val());
                     let nummax = $(this).attr('maxnum');
                     let res = 0;
@@ -229,7 +232,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                         num = nummax;
                         $(this).val(nummax);
                     }
-                    if (num < 1) {
+                    if (num < 1 || $(this).val() == '-') {
                         num = 1;
                         $(this).val(1);
                     }
