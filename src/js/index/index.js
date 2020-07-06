@@ -384,10 +384,10 @@ define(['jquery', 'cookie'], function($, cookie) {
                     day = now.getDate(),
                     hour = now.getHours();
                 let aim;
-                if (hour >= 14) {
-                    aim = new Date(year, months, day + 1, 14, 0, 0);
+                if (hour >= 16) {
+                    aim = new Date(year, months, day + 1, 16, 0, 0);
                 } else {
-                    aim = new Date(year, months, day, 14, 0, 0);
+                    aim = new Date(year, months, day, 16, 0, 0);
                 }
                 let num = aim.getTime() - now.getTime(),
                     newhour = parseInt(num / (1000 * 60 * 60)),
