@@ -406,7 +406,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                 $($('.timmer__unit')[1]).html(newminutes);
                 $($('.timmer__unit')[2]).html(newsecond);
             }
-            setInterval(getTimer, 1000);
+            let timer1 = setInterval(getTimer, 1000);
         },
         search: function() {
             $('.text').on('input', function() {
