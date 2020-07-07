@@ -783,15 +783,16 @@ define(['jquery', 'cookie'], function($, cookie) {
                 }
 
             })
-            $('.dorpdown-layer').on('mouseenter', function() {
+            $('.cw-icon').on('mouseenter', function() {
                 let idlist = [];
                 let shop = cookie.get('shop');
-                if (shop != '[]') {
+                if (shop != '[]' && shop != undefined) {
                     shop = JSON.parse(shop);
                     shop.forEach(elm => {
                         idlist.push(elm.id);
                     })
                     idlist = idlist.join();
+                    $('.cw-icon .ci-count').html(shop.length);
                     $('.prompt').replaceWith(`<div id="settleup-content">
                     <div class="smt"><h4 class="fl">最新加入的商品</h4></div>
                     <div class="smc"></div>
@@ -833,7 +834,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                 }
             })
             $('.dorpdown-layer').on('click', '.delete', function() {
-                console.log(1);
+                // console.log(1);
                 $(this).parents('#mcart-sigle').remove();
                 let shop = cookie.get('shop');
                 if (shop) {
