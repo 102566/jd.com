@@ -2,7 +2,8 @@ require.config({
     paths: {
         jquery: '../../node_modules/jquery/dist/jquery.min',
         index: './login/login',
-        md5: './jquery.md5'
+        md5: './jquery.md5',
+        cookie: './cookie'
     },
     shim: {
         md5: ['jquery']

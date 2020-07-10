@@ -463,7 +463,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                         <div id="choose-btns" class="choose-btns clearfix">
                             <div class="choose-amount " clstag="shangpin|keycount|product|goumaishuliang_2">
                                 <div class="wrap-input">
-                                    <input class="text buy-num" onkeyup="setAmount.modify('#buy-num');" id="buy-num" value="1" data-max="200">
+                                    <input class="text buy-num" id="buy-num" value="1" data-max="${res.num}" style="outline:none">
                                     <a class="btn-reduce disabled" href="#none" data-disabled="1">-</a>
                                     <a class="btn-add" href="#none" data-disabled="1">+</a>
                                 </div>
@@ -605,7 +605,9 @@ define(['jquery', 'cookie'], function($, cookie) {
             $('.product-intro').on('click', '.btn-add', function() {
 
                 let addnum = parseInt($('.buy-num').val());
-                if (addnum < num1) {
+                if ((+addnum) < (+num1)) {
+                    console.log(num1);
+                    console.log(addnum);
                     addnum++;
                 }
                 $('.buy-num').val(addnum);
@@ -704,6 +706,17 @@ define(['jquery', 'cookie'], function($, cookie) {
                         'zIndex': 999,
                     });
                 }, 1)
+            })
+            $('.product-intro').on('input', '#buy-num', function() {
+                let num = $(this).attr('data-max');
+                let str = $(this).val();
+                let str1 = str.replace(/\D/g, '');
+                $(this).val(str1)
+                if ($(this).val() < 1) {
+                    $(this).val(1);
+                } else if ((+$(this).val()) > (+num)) {
+                    $(this).val(num);
+                }
             })
 
             $('.product-intro').on('mousemove', '.main-img', function(evt) {
@@ -829,6 +842,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                         }
                     });
                 } else {
+                    $('.cw-icon .ci-count').html(0);
                     $('.prompt').replaceWith('<div class="prompt"><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div></div>');
                     $('#settleup-content').replaceWith('<div class="prompt"><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div></div>');
                 }

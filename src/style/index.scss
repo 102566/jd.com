@@ -4,6 +4,13 @@
     padding: 0px;
 }
 
+input,
+button,
+select,
+textarea {
+    outline: none;
+}
+
 .left {
     float: left;
 }

@@ -74,11 +74,8 @@ define(['jquery', 'cookie'], function($, cookie) {
             $('.sliderBannerWrapper .slider_control_prev').on('click', prev);
             $('.sliderBannerWrapper .slider_control_next').on('click', next);
 
-            $('.sliderBannerWrapper').hover(function() {
-                stop();
-            }, function() {
-                main();
-            })
+            $('.sliderBannerWrapper').on('mouseover', stop);
+            $('.sliderBannerWrapper').on('mouseleave', main);
             $('.focus__main .slider_indicators_btn').on('click', function() {
                 _index = $('.focus__main .slider_indicators_btn').index(this);
                 first_x = _index * -step,
@@ -91,6 +88,7 @@ define(['jquery', 'cookie'], function($, cookie) {
 
 
             function prev() {
+                $('.sliderBannerWrapper .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
                 if (first_x == -4720) {
                     _index = 0;
                     $('.sliderBannerWrapper .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
@@ -112,6 +110,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             }
 
             function next() {
+                $('.sliderBannerWrapper .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
                 if (first_x == 0) {
                     _index = 8;
                     $(this).siblings('.slider_list').children('.slider_wrapper').stop(true, true)
@@ -136,16 +135,23 @@ define(['jquery', 'cookie'], function($, cookie) {
                 timer = setInterval(prev, 2666);
             }
             main();
+            window.onblur = function() {
+                stop();
+            }
+            window.focus = function() {
+                main();
+            }
         },
         slider_1: function() {
             let timer;
             let _index = 1;
             $('.sliderRecommend>.slider_control_prev').on('click', prev);
             $('.sliderRecommend>.slider_control_next').on('click', next);
-            $('.sliderRecommend .focus-slider__item').hover(stop, start);
-
+            $('.sliderRecommend .focus-slider__item').on('mouseover', stop);
+            $('.sliderRecommend .focus-slider__item').on('mouseleave', start);
 
             function prev() {
+                $('.sliderRecommend .slider_item').stop(true, true);
                 if (_index == 2) {
                     _index = -1;
                 }
@@ -155,6 +161,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             }
 
             function next() {
+                $('.sliderRecommend .slider_item').stop(true, true);
                 if (_index == 0) {
                     _index = 3;
                 }
@@ -171,6 +178,12 @@ define(['jquery', 'cookie'], function($, cookie) {
                 clearInterval(timer);
             }
             start();
+            window.onblur = function() {
+                stop();
+            }
+            window.focus = function() {
+                start();
+            }
         },
         slider_2: function() {
             let step = 800;
@@ -178,9 +191,11 @@ define(['jquery', 'cookie'], function($, cookie) {
             let timer;
             $('.seckill-list .slider_control_prev').on('click', prev);
             $('.seckill-list .slider_control_next').on('click', next);
-            $('.seckill-list .slider_list').hover(stop, start);
+            $('.seckill-list .slider_list').on('mouseover', stop);
+            $('.seckill-list .slider_list').on('mouseleave', start);
 
             function prev() {
+                $('.seckill-list .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
                 if (Xsite == -4800) {
                     Xsite = -800;
                     // $('.seckill-list .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
@@ -191,6 +206,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             }
 
             function next() {
+                $('.seckill-list .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
                 if (Xsite == -800) {
                     Xsite = -4800;
                     // $('.seckill-list .slider_control_prev').siblings('.slider_list').children('.slider_wrapper').stop(true, true);
@@ -206,6 +222,12 @@ define(['jquery', 'cookie'], function($, cookie) {
 
             function stop() {
                 clearInterval(timer);
+            }
+            window.onblur = function() {
+                stop();
+            }
+            window.focus = function() {
+                start();
             }
             start();
         },
@@ -252,9 +274,11 @@ define(['jquery', 'cookie'], function($, cookie) {
             let timer;
             $('.core2 .slider_control_prev').on('click', prev);
             $('.core2 .slider_control_next').on('click', next);
-            $('.core2 .slider_list').hover(stop, start);
+            $('.core2 .slider_list').on('mouseover', stop);
+            $('.core2 .slider_list').on('mouseleave', start);
 
             function prev() {
+                $('.core2 .slider_wrapper').stop(true, true);
                 if (left == -975) {
                     left = -65;
                     $('.core2 .slider_wrapper').css('left', left)
@@ -276,6 +300,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             }
 
             function next() {
+                $('.core2 .slider_wrapper').stop(true, true);
                 if (left == -65) {
                     left = -975;
                     $('.core2 .slider_wrapper').css('left', left)
@@ -302,6 +327,12 @@ define(['jquery', 'cookie'], function($, cookie) {
 
             function stop() {
                 clearInterval(timer);
+            }
+            window.onblur = function() {
+                stop();
+            }
+            window.focus = function() {
+                start();
             }
             start();
         },
@@ -333,9 +364,11 @@ define(['jquery', 'cookie'], function($, cookie) {
             let timer;
             $($('.seckill-brand .slider_indicators_btn')[0]).on('click', next)
             $($('.seckill-brand .slider_indicators_btn')[1]).on('click', prev)
-            $('.seckill-brand').hover(stop, start);
+            $('.seckill-brand').on('mouseover', stop);
+            $('.seckill-brand').on('mouseleave', start);
 
             function prev() {
+                $('.seckill-brand .slider_wrapper').stop(true, true);
                 if (!flag) {
                     flag = !flag;
                     if (left == -540) {
@@ -352,6 +385,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             }
 
             function next() {
+                $('.seckill-brand .slider_wrapper').stop(true, true);
                 if (flag) {
                     flag = !flag;
                     if (left == -180) {
@@ -390,7 +424,12 @@ define(['jquery', 'cookie'], function($, cookie) {
             function stop() {
                 clearInterval(timer);
             }
-
+            window.onblur = function() {
+                stop();
+            }
+            window.focus = function() {
+                start();
+            }
             start();
         },
         seckill: function() {

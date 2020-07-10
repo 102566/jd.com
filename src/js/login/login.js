@@ -1,9 +1,15 @@
 let baseUrl = "http://localhost/jd.com";
-define(['jquery', 'md5'], function($, md5) {
+define(['jquery', 'md5', 'cookie'], function($, md5, cookie) {
     "use strict";
     return {
         render: function() {
             $('#loginsubmit').on('click', function() {
+                let login = cookie.get('login');
+                console.log(login);
+                if (login === 'true') {
+                    alert('已登陆');
+                    location.href = `${baseUrl}/src/html/index.html`;
+                }
                 let username = $('#loginname').val();
                 let password = $('#nloginpwd').val();
                 password = $.md5(password);

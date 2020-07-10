@@ -6,9 +6,7 @@ define(['jquery', 'cookie'], function($, cookie) {
         render: function() {
             let shop = cookie.get('shop');
             if (shop) {
-
                 shop = JSON.parse(shop);
-
                 let idlist = shop.map(elm => elm.id).join();
                 $('.number').html(shop.length);
                 $('.amount-sum>em').html(shop.length);
@@ -79,7 +77,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                                     <!--单品-->
                                     <div class="quantity-form">
                                         <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_down" class="decrement " id="asdf${elm.id}">-</a>
-                                        <input autocomplete="off" type="text" class="itxt" value="${sumnum}" minnum="1" maxnum="${elm.num}">
+                                        <input autocomplete="off" type="text" class="itxt" value="${sumnum}" minnum="1" maxnum="${elm.num}" style="outline:none">
                                         <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_up" class="increment " id="asd${elm.id}">+</a>
                                     </div>
                                     <div class="ac ftx-03 quantity-txt" _stock="stock_46318765895">还剩${elm.num}件</div>
@@ -200,6 +198,10 @@ define(['jquery', 'cookie'], function($, cookie) {
                 })
 
                 $('.item-list').on('click', '.cart-remove', function() {
+                    let shop = cookie.get('shop');
+                    if (shop) {
+                        shop = JSON.parse(shop);
+                    }
                     let _id = this.id.replace(/asdfg/, '');
                     let flag = confirm('确定吗');
                     let _shop = [];
@@ -212,12 +214,14 @@ define(['jquery', 'cookie'], function($, cookie) {
                             }
                         })
                         cookie.set('shop', JSON.stringify(_shop), 1)
+                        $('.number').html(shop.length - 1);
+                        $('.amount-sum>em').html(shop.length - 1);
                     }
                     Array.from($('.p-sum>strong')).forEach(elm => {
                         res += (+elm.innerHTML.slice(1))
                     })
                     $('.sumPrice>em').html(res);
-                    location.reload();
+                    // location.reload();
                 })
 
                 $('.item-list').on('input', '.itxt', function() {
