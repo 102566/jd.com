@@ -331,11 +331,44 @@ define(['jquery', 'cookie'], function($, cookie) {
             let step = 180;
             let left = -180;
             let timer;
-            $($('.seckill-brand .slider_indicators_btn')[0]).on('click', prev)
-            $($('.seckill-brand .slider_indicators_btn')[1]).on('click', next)
+            $($('.seckill-brand .slider_indicators_btn')[0]).on('click', next)
+            $($('.seckill-brand .slider_indicators_btn')[1]).on('click', prev)
             $('.seckill-brand').hover(stop, start);
 
             function prev() {
+                if (!flag) {
+                    flag = !flag;
+                    if (left == -540) {
+                        left = -180;
+                        $('.seckill-brand .slider_wrapper').css('left', left);
+                    }
+                    $('.seckill-brand .slider_indicators_btn').removeClass('slider_indicators_btn_active')
+                    $($('.seckill-brand .slider_indicators_btn')[Number(flag)]).addClass('slider_indicators_btn_active');
+                    left -= step;
+                    $('.seckill-brand .slider_wrapper').animate({
+                        left: left
+                    }, 600)
+                }
+            }
+
+            function next() {
+                if (flag) {
+                    flag = !flag;
+                    if (left == -180) {
+                        left = -540;
+                        $('.seckill-brand .slider_wrapper').css('left', left);
+                    }
+                    $('.seckill-brand .slider_indicators_btn').removeClass('slider_indicators_btn_active')
+                    $($('.seckill-brand .slider_indicators_btn')[Number(flag)]).addClass('slider_indicators_btn_active');
+                    left += step;
+                    $('.seckill-brand .slider_wrapper').animate({
+                        left: left
+                    }, 600)
+                }
+
+            }
+
+            function auto() {
                 flag = !flag;
                 if (left == -540) {
                     left = -180;
@@ -350,22 +383,8 @@ define(['jquery', 'cookie'], function($, cookie) {
                 }, 600)
             }
 
-            function next() {
-                flag != flag;
-                if (left == -180) {
-                    left = -540;
-                    $('.seckill-brand .slider_wrapper').css('left', left);
-                }
-                $('.seckill-brand .slider_indicators_btn').removeClass('slider_indicators_btn_active')
-                $($('.seckill-brand .slider_indicators_btn')[Number(flag)]).addClass('slider_indicators_btn_active');
-                left += step;
-                $('.seckill-brand .slider_wrapper').animate({
-                    left: left
-                }, 600)
-            }
-
             function start() {
-                timer = setInterval(prev, 2000)
+                timer = setInterval(auto, 2000)
             }
 
             function stop() {
